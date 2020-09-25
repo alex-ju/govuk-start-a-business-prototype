@@ -20,5 +20,8 @@ Example usage:
 module.exports = {
 
   // Insert values here
+  'company-name': 'Acme Inc',
+  'company-number': '01234567',
+  'company-type': 'Limited by shares'
 
 }
