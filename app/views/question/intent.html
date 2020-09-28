@@ -1,0 +1,70 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="/question/employ">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form class="form" action="/question/support" method="post">
+
+        {% from "govuk/components/radios/macro.njk" import govukRadios %}
+
+        <span class="govuk-caption-l">Running and growing your business</span>
+        {{ govukCheckboxes({
+          idPrefix: "intent",
+          name: "intent",
+          fieldset: {
+            legend: {
+              text: "Does your business do any of the following?",
+              isPageHeading: true,
+              classes: "govuk-fieldset__legend--l"
+            }
+          },
+          items: [
+            {
+              value: "import",
+              text: "Buy good from abroad",
+              checked: checked("intent", "import")
+            },
+            {
+              value: "export",
+              text: "Sell goods abroad",
+              checked: checked("intent", "export")
+            },
+            {
+              value: "data-protection",
+              text: "Store or use personal information",
+              checked: checked("intent", "data-protection")
+            },
+            {
+              value: "sell-online",
+              text: "Sell goods online",
+              checked: checked("intent", "sell-online")
+            },
+            {
+              divider: "or"
+            },
+            {
+              value: "none",
+              text: "None of the above",
+              checked: checked("intent", "none")
+            }
+          ]
+        }) }}
+
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

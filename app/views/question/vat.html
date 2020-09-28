@@ -1,0 +1,57 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="/next-steps">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form class="form" action="/question/employ" method="post">
+
+        {% from "govuk/components/radios/macro.njk" import govukRadios %}
+
+        <span class="govuk-caption-l">Running and growing your business</span>
+        {{ govukRadios({
+          idPrefix: "vat",
+          name: "vat",
+          fieldset: {
+            legend: {
+              text: "Will your business make more than £85,000 in a 12 month period?",
+              isPageHeading: true,
+              classes: "govuk-fieldset__legend--l"
+            }
+          },
+          items: [
+            {
+              value: "yes",
+              text: "Yes",
+              checked: data.vat == 'yes'
+            },
+            {
+              value: "no",
+              text: "No",
+              checked: data.vat == 'no'
+            },
+            {
+              value: "maybe",
+              text: "Maybe in the future",
+              checked: data.vat == 'maybe'
+            }
+          ]
+        }) }}
+
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}
