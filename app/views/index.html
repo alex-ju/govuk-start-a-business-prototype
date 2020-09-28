@@ -13,20 +13,34 @@
         The GOV.UK Prototype Kit
         <span class="govuk-caption-xl">{{releaseVersion}}</span>
       </h1>{{releaseVersion | log }}
-      <p>
-        This kit lets you rapidly create HTML prototypes of GOV.UK services.
-      </p>
+
+      <h2 class="govuk-heading-m">Start a business</h2>
+
+      <h3 class="govuk-heading-s">
+        Discovery: first round of user research
+      </h3>
 
       <p>
-        It contains all you need to prototype anything from simple static pages to complex, data-driven transactions.
+        Company name: {{ data['company-name'] }}
       </p>
 
-      <h2 class="govuk-heading-m">About this page</h2>
-
-      <p>We recommend you add links to your prototype to this page, rather than delete it.
-        You'll find this page in the kit at '/app/views/index.html'.</p>
-
-      <p>You can change the service name by editing the file '/app/config.js'.</p>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>
+          <a href="/email-confirmation">Company registration confirmation email</a>
+        </li>
+        <li>
+          <a href="/next-steps">Next steps on running your business page</a>
+        </li>
+        <li>
+          <a href="/tell-us-more-about-your-business">Tell us more about your business questions</a>
+        </li>
+        <li>
+          <a href="/apply-for-licence">Apply for a licence service</a>
+        </li>
+        <li>
+          <a href="/thank-you">Thank you page</a>
+        </li>
+      </ul>
 
       <h2 class="govuk-heading-m">Examples and documentation</h2>
 
