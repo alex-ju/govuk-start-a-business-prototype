@@ -16,5 +16,71 @@ $govuk-assets-path: '/govuk/assets/';
 
 // Components that aren't in Frontend
 @import "components/cookie-banner";
+@import "components/action-link";
 
 // Add extra styles here, or re-organise the Sass files in whichever way makes most sense to you
+.app-hero {
+  background-color: govuk-colour("blue");
+  margin-top: - govuk-spacing(2);
+  padding: govuk-spacing(3) 0;
+
+  .govuk-breadcrumbs__link,
+  .govuk-caption-l,
+  .govuk-heading-l,
+  .govuk-body,
+  .govuk-link,
+  p,
+  a {
+    color: govuk-colour("white");
+  }
+
+  a:focus {
+    color: $govuk-text-colour;
+  }
+}
+
+.app-section {
+  border-top: 1px solid $govuk-border-colour;
+  padding-top: govuk-spacing(6);
+}
+
+.app-aside {
+  .govuk-body,
+  .govuk-list {
+    @include govuk-font(16);
+  }
+}
+
+.app-result {
+  border-bottom: 1px solid $govuk-border-colour;
+  padding-top: govuk-spacing(6);
+
+  &:first-child {
+    padding-top: 0;
+  }
+
+  &:last-child {
+    border-bottom: none;
+  }
+
+  .govuk-heading-s {
+    margin-bottom: govuk-spacing(2);
+  }
+
+  .govuk-body {
+    margin-bottom: govuk-spacing(6);
+  }
+
+  .govuk-tag {
+    margin-left: govuk-spacing(2);
+  }
+}
+
+.app-other {
+  background: govuk-colour("light-grey");
+  padding-bottom: govuk-spacing(6);
+
+  .app-section {
+    border-top: 0;
+  }
+}

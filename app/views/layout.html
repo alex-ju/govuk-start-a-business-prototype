@@ -46,12 +46,14 @@
     serviceUrl: "/",
     containerClasses: "govuk-width-container"
   }) }}
+  {% block hero %}{% endblock %}
 {% endblock %}
 
 {% set mainClasses = mainClasses | default("govuk-main-wrapper--auto-spacing") %}
 
 {% if useAutoStoreData %}
   {% block footer %}
+    {% block other %}{% endblock %}
     {{ govukFooter({
       meta: {
         items: [

@@ -1,0 +1,15 @@
+{% from "govuk/components/tag/macro.njk" import govukTag %}
+
+{% macro appResult(result) %}
+  <div class="app-result">
+    <h4 class="govuk-heading-s">
+      <a href="{{ result.href }}" target="_blank">{{ result.title }}</a>
+      {% if result.state == 'completed' %}
+        {{- govukTag({text: "Completed"}) }}
+      {% endif %}
+    </h4>
+    <p class="govuk-body">
+      {{ result.body }}
+    </p>
+  </div>
+{% endmacro %}

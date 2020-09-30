@@ -1,0 +1,98 @@
+
+{% extends "layout.html" %}
+
+{% from "components/result.html" import appResult %}
+
+{% block pageTitle %}
+  Next steps on running and growing your business
+{% endblock %}
+
+{% block hero %}
+<div class="app-hero">
+  <div class="govuk-width-container">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        {{ govukBreadcrumbs({
+          items: [
+            {
+              text: "Home",
+              href: "#"
+            }
+          ]
+        }) }}
+
+        <span class="govuk-caption-l">
+          Part of <a href="#">Business and self-employed</a>
+        </span>
+        <h1 class="govuk-heading-l">
+          Next steps on running and growing your business
+        </h1>
+        <p>
+          The information on this page is based on public company registration data for {{ data['company-name'] }}.
+        </p>
+
+        {% include "components/action-link.html" %}
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+{% block content %}
+
+  <p>5 results, 1 completed, <a href="#">4 marked as not relevant.</a></p>
+
+  {% for section in data.sections %}
+    {% set reasons = section.reasons | visible(data) %}
+    {% set results = section.results | visible(data) %}
+
+    {% if results | length %}
+    <section class="app-section">
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-one-third">
+          <h3 class="govuk-heading-m">{{ section.title }}</h3>
+          {% if reasons | length %}
+          <aside class="app-aside">
+            <p class="govuk-body">Because:</p>
+            <ul class="govuk-list govuk-list--bullet">
+              {% for reason in reasons %}
+                <li>{{ reason.text }} {{ data[reason.data] }}</li>
+              {% endfor %}
+            </ul>
+          </aside>
+          {% endif %}
+        </div>
+
+        <div class="govuk-grid-column-two-thirds">
+          {% for result in results %}
+            {{ appResult(result) }}
+          {% endfor %}
+        </div>
+      </div>
+    </section>
+    {% endif %}
+  {% endfor %}
+{% endblock %}
+
+{% block other %}
+<div class="app-other">
+  <div class="govuk-width-container">
+    <section class="app-section">
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-one-third">
+          <h3 class="govuk-heading-m">You may also be interested&nbsp;in</h3>
+        </div>
+
+        <div class="govuk-grid-column-two-thirds">
+          {% for section in data.sections %}
+            {% set maybes = section.results | maybe(data) %}
+            {% for result in maybes %}
+              {{ appResult(result) }}
+            {% endfor %}
+          {% endfor %}
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+{% endblock %}
