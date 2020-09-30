@@ -1,0 +1,78 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Start page example
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+  {{ govukHeader() }}
+{% endblock %}
+
+{% block beforeContent %}
+  <div class="govuk-breadcrumbs">
+    <ol class="govuk-breadcrumbs__list">
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="https://www.gov.uk">Home</a>
+      </li>
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="#">Business and self-employed</a>
+      </li>
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link">Licence</a>
+      </li>
+    </ol>
+  </div>
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <span class="govuk-caption-l">Licence</span>
+      <h1 class="govuk-heading-l">
+        Massage and special treatment premises licensing
+      </h1>
+
+      <p>If you run an establishment for 'special treatments' (beauty treatments) you may require a licence for the establishment. Operators will also need to be suitably qualified to carry out treatments.</p>
+
+      <p>Special treatments include:</p>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li>massage</li>
+        <li>manicure</li>
+        <li>chiropody</li>
+        <li>light treatments, eg sunbeds</li>
+        <li>electric treatments, eg electrolysis</li>
+        <li>other treatments involving heat, light or vapour, eg sauna or other bath treatments</li>
+      </ul>
+
+      <p>You will be required to apply for your licence every year.</p>
+
+      <a href="#" role="button" draggable="false" class="govuk-button govuk-button--start govuk-!-margin-top-2 govuk-!-margin-bottom-8"  data-module="govuk-button">
+        Start now
+        <svg class="govuk-button__start-icon" xmlns="http://www.w3.org/2000/svg" width="17.5" height="19" viewBox="0 0 33 40" role="presentation" focusable="false">
+          <path fill="currentColor" d="M0 0h13l20 20-20 20H0l20-20z"></path>
+        </svg>
+      </a>
+
+      <h2 class="govuk-heading-m">Before you start</h2>
+
+      <p>You can also <a href="#">register by post</a>.</p>
+
+      <p>Your premises might be inspected before you’re given a licence.</p>
+
+      {{ govukWarningText({
+        text: "If you employ therapists carrying out special treatments, they should also register with the council if required.",
+        iconFallbackText: "Warning"
+      }) }}
+
+      <p>You could be fined if you don’t have a licence, or break any conditions of your licence.</p>
+
+      <p>The issuing authority for this licence is {{ data['company-borough'] }} (<a href="#">change location</a>)</p>
+
+    </div>
+
+    <div class="govuk-grid-column-one-third"></div>
+  </div>
+{% endblock %}
