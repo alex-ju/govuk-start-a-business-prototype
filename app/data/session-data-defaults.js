@@ -25,7 +25,18 @@ module.exports = {
   'company-type': 'Private limited Company',
   'company-sector': 'Hairdressing and other beauty treatment', // nature of business
   'company-address': '10 Whitechapel High St, London E1 8QS',
+  'company-address-street': '10 Whitechapel High St',
+  'company-address-city': 'London',
+  'company-address-postcode': 'E1 8QS',
   'company-borough': 'London Borough of Tower Hamlets',
+  'officer-name': 'Sarah Philips',
+  'officer-dob-month': '3',
+  'officer-dob-year': '1987',
+  'officer-address-street': '72 Guild Street',
+  'officer-address-city': 'London',
+  'officer-address-postcode': 'SE23 6FH',
+  // 'officer-phone': '07700 900457',
+  // 'officer-email': 'sarah.phillips@example.com',
   sections: [
     {
       title: 'Business tax',
@@ -172,7 +183,8 @@ module.exports = {
       results: [
         {
           title: 'Massage and special treatment premises licensing',
-          href: 'https://www.gov.uk/massage-and-special-treatment-premises-licensing',
+          // href: 'https://www.gov.uk/massage-and-special-treatment-premises-licensing',
+          href: '/licence/start',
           body: 'Get in touch with your council for a premises licence if you run an establishment for massage or other special treatments.',
           state: null
         },

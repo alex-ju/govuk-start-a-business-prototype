@@ -1,0 +1,63 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="/licence/premises">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form class="form" action="/licence/check-your-answers" method="post">
+
+        {{ govukCheckboxes({
+          idPrefix: "waste",
+          name: "waste",
+          fieldset: {
+            legend: {
+              text: "What types of treatments are offered on premises?",
+              isPageHeading: true,
+              classes: "govuk-fieldset__legend--l"
+            }
+          },
+          hint: {
+            text: "Select all that apply."
+          },
+          items: [
+            {
+              text: "Massage treatments"
+            },
+            {
+              text: "Electrical treatments"
+            },
+            {
+              text: "Laser or light treatments"
+            },
+            {
+              text: "Acupuncture treatments"
+            },
+            {
+              text: "Nail treatments"
+            },
+            {
+              text: "Foot treatments"
+            },
+            {
+              text: "Cosmetic or skin treatments"
+            }
+          ]
+        }) }}
+
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

@@ -40,7 +40,7 @@
 
 {% block content %}
 
-  <p>5 results, 1 completed, <a href="#">4 marked as not relevant.</a></p>
+  <p>5 results, 1 completed. <!--a href="#">4 marked as not relevant.</a--></p>
 
   {% for section in data.sections %}
     {% set reasons = section.reasons | visible(data) %}
@@ -65,7 +65,7 @@
 
         <div class="govuk-grid-column-two-thirds">
           {% for result in results %}
-            {{ appResult(result) }}
+            {{ appResult(result, data) }}
           {% endfor %}
         </div>
       </div>

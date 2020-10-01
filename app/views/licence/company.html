@@ -1,0 +1,93 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="/licence/applicant">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">Company details</h1>
+
+      <p class="govuk-body">This form uses public information from your company registration with the Companies House. Please adjust accordingly if not accurate.</p>
+
+      <form class="form" action="/licence/premises" method="post">
+
+        {{ govukInput({
+          label: {
+            text: "Company name",
+            classes: "govuk-label--s"
+          },
+          id: "full-name",
+          name: "company-name",
+          value: data['company-name'],
+          autocomplete: "name",
+          spellcheck: false
+        }) }}
+
+        {{ govukInput({
+          label: {
+            text: "Company registration number",
+            classes: "govuk-label--s"
+          },
+          id: "full-name",
+          name: "company-number",
+          value: data['company-number'],
+          autocomplete: "name",
+          spellcheck: false
+        }) }}
+
+        {% call govukFieldset({
+          legend: {
+            text: "Registered office address",
+            classes: "govuk-fieldset__legend--s"
+          }
+        }) %}
+
+          {{ govukInput({
+            label: {
+              html: 'Building and street'
+            },
+            id: "address-line-1",
+            name: "company-address-street",
+            value: data['company-address-street'],
+            autocomplete: "address-line1"
+          }) }}
+
+          {{ govukInput({
+            label: {
+              text: "Town or city"
+            },
+            classes: "govuk-!-width-two-thirds",
+            id: "address-town",
+            name: "company-address-city",
+            value: data['company-address-city'],
+            autocomplete: "address-level2"
+          }) }}
+
+          {{ govukInput({
+            label: {
+              text: "Postcode"
+            },
+            classes: "govuk-input--width-10",
+            id: "address-postcode",
+            name: "company-address-postcode",
+            value: data['company-address-postcode'],
+            autocomplete: "postal-code"
+          }) }}
+
+        {% endcall %}
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}
