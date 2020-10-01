@@ -188,12 +188,6 @@ module.exports = {
           body: 'Get in touch with your council for a premises licence if you run an establishment for massage or other special treatments.',
           state: null
         },
-        // {
-        //   title: 'Hairdresser registration (England)',
-        //   href: 'https://www.gov.uk/register-a-hairdressing-business',
-        //   body: 'You may have to register with your local council in England if you run a hairdressing or barbers business, so that they can check you\'re following health and safety rules',
-        //   state: null
-        // },
         {
           title: 'Tattoo, piercing and electrolysis licence (England and Wales)',
           href: 'https://www.gov.uk/skin-piercing-and-tattooing/tower-hamlets',
