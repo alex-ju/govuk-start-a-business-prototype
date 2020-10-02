@@ -16,8 +16,8 @@
       <form class="form" action="/licence/check-your-answers" method="post">
 
         {{ govukCheckboxes({
-          idPrefix: "waste",
-          name: "waste",
+          idPrefix: "treatment",
+          name: "treatment",
           fieldset: {
             legend: {
               text: "What types of treatments are offered on premises?",
@@ -30,25 +30,39 @@
           },
           items: [
             {
-              text: "Massage treatments"
+              text: "Massage treatments",
+              value: "Massage treatments",
+              checked: checked("treatment", "Massage treatments")
             },
             {
-              text: "Electrical treatments"
+              text: "Electrical treatments",
+              value: "Electrical treatments",
+              checked: checked("treatment", "Electrical treatments")
             },
             {
-              text: "Laser or light treatments"
+              text: "Laser or light treatments",
+              value: "Laser or light treatments",
+              checked: checked("treatment", "Laser or light treatments")
             },
             {
-              text: "Acupuncture treatments"
+              text: "Acupuncture treatments",
+              value: "Acupuncture treatments",
+              checked: checked("treatment", "Acupuncture treatments")
             },
             {
-              text: "Nail treatments"
+              text: "Nail treatments",
+              value: "Nail treatments",
+              checked: checked("treatment", "Nail treatments")
             },
             {
-              text: "Foot treatments"
+              text: "Foot treatments",
+              value: "Foot treatments",
+              checked: checked("treatment", "Foot treatments")
             },
             {
-              text: "Cosmetic or skin treatments"
+              text: "Cosmetic or skin treatments",
+              value: "Cosmetic or skin treatments",
+              checked: checked("treatment", "Cosmetic or skin treatments")
             }
           ]
         }) }}

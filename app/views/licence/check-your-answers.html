@@ -25,7 +25,7 @@
             {{ data['officer-name'] }}
           </dd>
           <dd class="govuk-summary-list__actions">
-            <a href="#">
+            <a href="/licence/applicant">
               Change
               <span class="govuk-visually-hidden"> name</span>
             </a>
@@ -36,10 +36,10 @@
             Date of birth
           </dt>
           <dd class="govuk-summary-list__value">
-            {{ data['officer-dob-day'] }}/{{ data['officer-dob-month'] }}/{{ data['officer-dob-year'] }}
+            {{ data['officer-dob-day'] }} {{ data['officer-dob-month'] }} {{ data['officer-dob-year'] }}
           </dd>
           <dd class="govuk-summary-list__actions">
-            <a href="#">
+            <a href="/licence/applicant">
               Change
               <span class="govuk-visually-hidden"> date of birth</span>
             </a>
@@ -55,9 +55,9 @@
             <br>{{ data['officer-address-postcode'] }}
           </dd>
           <dd class="govuk-summary-list__actions">
-            <a href="#">
+            <a href="/licence/applicant">
               Change
-              <span class="govuk-visually-hidden"> contact information</span>
+              <span class="govuk-visually-hidden"> correspondence information</span>
             </a>
           </dd>
         </div>
@@ -70,9 +70,58 @@
             <p>{{ data['officer-email'] }}</p>
           </dd>
           <dd class="govuk-summary-list__actions">
-            <a href="#">
+            <a href="/licence/applicant">
               Change
               <span class="govuk-visually-hidden"> contact details</span>
+            </a>
+          </dd>
+        </div>
+      </dl>
+
+      <h2 class="govuk-heading-m">Company details</h2>
+
+      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Company name
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['company-name'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="/licence/company">
+              Change
+              <span class="govuk-visually-hidden"> company name</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Company registration number
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['company-number'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="/licence/company">
+              Change
+              <span class="govuk-visually-hidden"> company number</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Registered office address
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['company-address-street'] }}
+            <br>{{ data['company-address-city'] }}
+            <br>{{ data['company-address-postcode'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="/licence/company">
+              Change
+              <span class="govuk-visually-hidden"> registered office address</span>
             </a>
           </dd>
         </div>
@@ -83,59 +132,71 @@
       <dl class="govuk-summary-list govuk-!-margin-bottom-9">
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
-            Previous application number
+            Are premises under construction?
           </dt>
           <dd class="govuk-summary-list__value">
-            502135326
+            {{ data['premises-under-construction'] }}
           </dd>
           <dd class="govuk-summary-list__actions">
-            <a href="#">
+            <a href="/licence/premises">
               Change
-              <span class="govuk-visually-hidden"> previous application number</span>
+              <span class="govuk-visually-hidden"> answer</span>
             </a>
           </dd>
         </div>
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
-            Licence type
+            Are premises commercial?
           </dt>
           <dd class="govuk-summary-list__value">
-            For personal use
+            {{ data['premises-commercial'] }}
           </dd>
           <dd class="govuk-summary-list__actions">
-            <a href="#">
+            <a href="/licence/premises">
               Change
-              <span class="govuk-visually-hidden"> licence type</span>
+              <span class="govuk-visually-hidden"> answer</span>
             </a>
           </dd>
         </div>
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
-            Premises address
+            Are premises shared?
           </dt>
           <dd class="govuk-summary-list__value">
-            72 Guild Street
-            <br>London
-            <br>SE23 6FH
+            {{ data['premises-shared'] }}
           </dd>
           <dd class="govuk-summary-list__actions">
-            <a href="#">
+            <a href="/licence/premises">
               Change
-              <span class="govuk-visually-hidden"> home address</span>
+              <span class="govuk-visually-hidden"> answer</span>
             </a>
           </dd>
         </div>
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
-            Licence period
+            Opening hours
           </dt>
           <dd class="govuk-summary-list__value">
-            Valid for 12 months
+            {{ data['opening-hours'] }}
           </dd>
           <dd class="govuk-summary-list__actions">
-            <a href="#">
+            <a href="/licence/premises">
               Change
-              <span class="govuk-visually-hidden"> licence period</span>
+              <span class="govuk-visually-hidden"> opening hours</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Treatments
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['treatment'] | join("<br>") | safe }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="/licence/treatment">
+              Change
+              <span class="govuk-visually-hidden"> treatments</span>
             </a>
           </dd>
         </div>
