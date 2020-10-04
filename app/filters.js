@@ -58,6 +58,30 @@ module.exports = function (env) {
     }
   }
 
+  filters.irelevant = function (results, data) {
+    if (results) {
+      return results.filter(result => (data['not-relevant'].includes(result.id)))
+    }
+  }
+
+  filters.relevant = function (results, data) {
+    if (results) {
+      return results.filter(result => (!data['not-relevant'].includes(result.id)))
+    }
+  }
+
+  filters.isCompleted = function (result, data) {
+    if (data) {
+      return data.completed.includes(result.id) || (result.href === '/licence/start' && data['answers-checked'])
+    }
+  }
+
+  filters.isIrelevant = function (result, data) {
+    if (data) {
+      return data['not-relevant'].includes(result.id)
+    }
+  }
+
   /* ------------------------------------------------------------------
     keep the following line to return your filters to the app
   ------------------------------------------------------------------ */

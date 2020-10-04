@@ -1,10 +1,15 @@
 {% from "govuk/components/tag/macro.njk" import govukTag %}
+{% from "components/dropdown.html" import appDropdown %}
 
 {% macro appResult(result, data) %}
+  {% set completed = result | isCompleted(data) %}
+  {% set irelevant = result | isIrelevant(data) %}
+
   <div class="app-result">
+    {{ appDropdown(result, data, completed, irelevant) }}
     <h4 class="govuk-heading-s">
       <a href="{{ result.href }}">{{ result.title }}</a>
-      {% if result.state == 'completed' or result.href == '/licence/start' and data['answers-checked']%}
+      {% if completed %}
         {{- govukTag({text: "Completed"}) }}
       {% endif %}
     </h4>

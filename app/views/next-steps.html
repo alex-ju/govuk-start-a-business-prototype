@@ -40,11 +40,28 @@
 
 {% block content %}
 
-  <p>5 results, 1 completed. <!--a href="#">4 marked as not relevant.</a--></p>
+  <p>
+    {% if notRelevantList %}
+      <a href="/next-steps">5 results, 1 completed.</a>
+    {% else %}
+      5 results, 1 completed.
+    {% endif %}
+    {% if data['not-relevant'] | length %}
+      {% if notRelevantList %}
+        {{ data['not-relevant'] | length }} marked as not relevant.
+      {% else %}
+        <a href="/next-steps/not-relevant">{{ data['not-relevant'] | length }} marked as not relevant.</a>
+      {% endif %}
+    {% endif %}
+  </p>
 
   {% for section in data.sections %}
-    {% set reasons = section.reasons | visible(data) %}
-    {% set results = section.results | visible(data) %}
+    {% if notRelevantList %}
+      {% set results = section.results | visible(data) | irelevant(data) %}
+    {% else %}
+      {% set reasons = section.reasons | visible(data) %}
+      {% set results = section.results | visible(data) | relevant(data) %}
+    {% endif %}
 
     {% if results | length %}
     <section class="app-section">
@@ -95,4 +112,6 @@
     </section>
   </div>
 </div>
+
+<form id="next-steps"></form>
 {% endblock %}
