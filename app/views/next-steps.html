@@ -102,9 +102,14 @@
 
         <div class="govuk-grid-column-two-thirds">
           {% for section in data.sections %}
-            {% set maybes = section.results | maybe(data) %}
+            {% if notRelevantList %}
+              {% set maybes = section.results | maybe(data) | irelevant(data) %}
+            {% else %}
+              {% set maybes = section.results | maybe(data) | relevant(data) %}
+            {% endif %}
+
             {% for result in maybes %}
-              {{ appResult(result) }}
+              {{ appResult(result, data) }}
             {% endfor %}
           {% endfor %}
         </div>

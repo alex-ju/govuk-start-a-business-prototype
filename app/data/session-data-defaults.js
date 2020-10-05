@@ -58,22 +58,19 @@ module.exports = {
           id: '10',
           title: 'Register your company',
           href: 'https://www.gov.uk/limited-company-formation/register-your-company',
-          body: 'You’ll get a ‘certificate of incorporation’. This confirms the company legally exists and shows the company number and date of formation.',
-          state: 'completed'
+          body: 'You’ll get a ‘certificate of incorporation’. This confirms the company legally exists and shows the company number and date of formation.'
         },
         {
           id: '11',
           title: 'Register for Corporation Tax',
           href: 'https://www.gov.uk/limited-company-formation/set-up-your-company-for-corporation-tax',
-          body: 'Register within 3 months of starting to do business. This includes buying, selling, advertising, renting a property and employing someone.',
-          state: null
+          body: 'Register within 3 months of starting to do business. This includes buying, selling, advertising, renting a property and employing someone.'
         },
         {
           id: '12',
           title: 'VAT registration',
           href: 'https://www.gov.uk/vat-registration',
           body: 'You must register your business for VAT with HM Revenue and Customs (HMRC) if its VAT taxable turnover is more than £85,000.',
-          state: null,
           attribute: 'vat',
           value: 'yes'
         }
@@ -99,7 +96,6 @@ module.exports = {
           title: 'Apply for a Start Up Loan for your business',
           href: 'https://www.gov.uk/apply-start-up-loan',
           body: 'Loans and mentoring for people looking to start or grow a business in England, Scotland, Wales and Northern Ireland.',
-          state: null,
           attribute: 'support',
           value: 'getting-started'
         },
@@ -108,7 +104,6 @@ module.exports = {
           title: 'Finance and support for your business',
           href: 'https://www.gov.uk/business-finance-support?regions%5B%5D=london',
           body: 'Find government-backed support and finance for business',
-          state: null,
           attribute: 'support',
           value: 'growing'
         },
@@ -117,7 +112,6 @@ module.exports = {
           title: 'Find coronavirus financial support for your business',
           href: 'https://www.gov.uk/business-coronavirus-support-finder',
           body: 'Coronavirus support is available to employers and the self-employed. You may be eligible for loans, tax relief and cash grants, whether your business is open or closed. Use this business support finder to see what support is available for you and your business.',
-          state: null,
           attribute: 'support',
           value: 'covid-19'
         }
@@ -138,7 +132,6 @@ module.exports = {
           title: 'Get your business ready to employ staff',
           href: 'https://www.gov.uk/get-ready-to-employ-someone',
           body: 'You need to register as an employer with HM Revenue and Customs (HMRC) when you start employing staff, or using subcontractors for construction work.',
-          state: null,
           attribute: 'employ',
           value: 'yes'
         }
@@ -164,7 +157,6 @@ module.exports = {
           title: 'Starting to import',
           href: 'https://www.gov.uk/starting-to-import',
           body: 'Importing goods and services into the UK - commodity codes, VAT and duty.',
-          state: null,
           attribute: 'intent',
           value: 'import'
         },
@@ -173,7 +165,6 @@ module.exports = {
           title: 'Exporting and doing business abroad',
           href: 'https://www.gov.uk/starting-to-export',
           body: 'What to do with exporting goods to other countries, including checking if you need a licence.',
-          state: null,
           attribute: 'intent',
           value: 'export'
         }
@@ -197,15 +188,13 @@ module.exports = {
           title: 'Massage and special treatment premises licensing',
           // href: 'https://www.gov.uk/massage-and-special-treatment-premises-licensing',
           href: '/licence/start',
-          body: 'Get in touch with your council for a premises licence if you run an establishment for massage or other special treatments.',
-          state: null
+          body: 'Get in touch with your council for a premises licence if you run an establishment for massage or other special treatments.'
         },
         {
           id: '51',
           title: 'Tattoo, piercing and electrolysis licence (England and Wales)',
           href: 'https://www.gov.uk/skin-piercing-and-tattooing/tower-hamlets',
-          body: 'You need to register with the relevant local council to get a tattoo, piercing and electrolysis licence in England and Wales',
-          state: null
+          body: 'You need to register with the relevant local council to get a tattoo, piercing and electrolysis licence in England and Wales'
         }
       ]
     },
@@ -229,7 +218,6 @@ module.exports = {
           title: 'Notification to process personal data',
           href: 'https://www.gov.uk/notification-to-process-personal-data',
           body: 'You must notify the Information Commissioner’s Office (ICO) if your organisation processes personal data in an automated form.',
-          state: null,
           attribute: 'intent',
           value: 'data-protection'
         },
@@ -238,7 +226,6 @@ module.exports = {
           title: 'Online and distance selling',
           href: 'https://www.gov.uk/online-and-distance-selling-for-businesses',
           body: 'Rules for online and distance selling for businesses.',
-          state: null,
           attribute: 'intent',
           value: 'sell-online'
         }
@@ -252,7 +239,6 @@ module.exports = {
           title: 'Intellectual property and your work',
           href: 'https://www.gov.uk/intellectual-property-an-overview',
           body: 'What intellectual property is, how you can protect it, and which of copyright, patents, design right and trade marks applies to your work.',
-          state: null,
           attribute: 'other',
           value: 'true'
         }
