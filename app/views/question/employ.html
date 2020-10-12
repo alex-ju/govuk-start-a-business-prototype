@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  Question page
+  Next steps for {{ data['company-name'] }}
 {% endblock %}
 
 {% block beforeContent %}
@@ -17,7 +17,7 @@
 
         {% from "govuk/components/radios/macro.njk" import govukRadios %}
 
-        <span class="govuk-caption-l">Running and growing your business</span>
+        <span class="govuk-caption-l">Next steps for {{ data['company-name'] }}</span>
         {{ govukRadios({
           idPrefix: "employ",
           name: "employ",
