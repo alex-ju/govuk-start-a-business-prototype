@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  Application to licence premises for massage or other special treatments
+  Application to licence premises for massage or other special types
 {% endblock %}
 
 {% block header %}
@@ -19,7 +19,7 @@
         <a class="govuk-breadcrumbs__link" href="#">Business and self-employed</a>
       </li>
       <li class="govuk-breadcrumbs__list-item">
-        <a class="govuk-breadcrumbs__link">Licence</a>
+        <a class="govuk-breadcrumbs__link">Licences and licence applications</a>
       </li>
     </ol>
   </div>
@@ -31,23 +31,10 @@
 
       <span class="govuk-caption-l">Licence</span>
       <h1 class="govuk-heading-l">
-        Application to licence premises for massage or other special treatments
+        Register a food business
       </h1>
 
-      <p>If you run an establishment for 'special treatments' (beauty treatments) you may require a licence for the establishment. Operators will also need to be suitably qualified to carry out treatments.</p>
-
-      <p>Special treatments include:</p>
-
-      <ul class="govuk-list govuk-list--bullet">
-        <li>massage</li>
-        <li>manicure</li>
-        <li>chiropody</li>
-        <li>light treatments, eg sunbeds</li>
-        <li>electric treatments, eg electrolysis</li>
-        <li>other treatments involving heat, light or vapour, eg sauna or other bath treatments</li>
-      </ul>
-
-      <p>You will be required to apply for your licence every year.</p>
+      <p>When you start a new food business or take over an existing business, you must register with your local authority. You should do this at least 28 days before trading or before food operations start.</p>
 
       <a href="/licence/applicant" role="button" draggable="false" class="govuk-button govuk-button--start govuk-!-margin-top-2 govuk-!-margin-bottom-8"  data-module="govuk-button">
         Start now
@@ -58,18 +45,16 @@
 
       <h2 class="govuk-heading-m">Before you start</h2>
 
-      <p>You can also <a href="#">register by post</a>.</p>
+      <p>During this registration, you may come across a few specialist terms, which we have described below:</p>
 
-      <p>Your premises might be inspected before you’re given a licence.</p>
+      <h3 class="govuk-heading-s">Food business operator</h3>
+      <p>The operator is the person, charity or company who makes the decisions about the food business. They decide what it serves and how it operates.</p>
 
-      {{ govukWarningText({
-        text: "Therapists carrying out special treatments at your premises may also need to register with the council.",
-        iconFallbackText: "Warning"
-      }) }}
+      <h3 class="govuk-heading-s">Establishment</h3>
+      <p>The establishment is the location or site of your food business. If it is a mobile food business, please use the location where it is normally stored overnight.</p>
 
-      <p>You could be fined if you don’t have a licence, or break any conditions of your licence.</p>
-
-      <p>The issuing authority for this licence is {{ data['company-borough'] }} (<a href="#">change location</a>)</p>
+      <h3 class="govuk-heading-s">Registering Local Authority</h3>
+      <p>{{ data['company-borough'] }} is the local authority your registration will be sent to. Is this the correct local authority for your business? If unsure, please use this Food Business Registration link to check using the location or site of your food business.</p>
 
     </div>
 

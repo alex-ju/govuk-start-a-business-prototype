@@ -185,10 +185,10 @@ module.exports = {
       results: [
         {
           id: '50',
-          title: 'Massage and special treatment premises licensing',
-          // href: 'https://www.gov.uk/massage-and-special-treatment-premises-licensing',
+          title: 'Register a food business',
+          // href: 'https://www.gov.uk/food-premises-approval/westminster',
           href: '/licence/start',
-          body: 'Get in touch with your council for a premises licence if you run an establishment for massage or other special treatments.'
+          body: 'Get in touch with your council for a premises licence if you run an establishment where meat, fish, egg or dairy products are handled.'
         },
         {
           id: '51',

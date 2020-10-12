@@ -1,0 +1,92 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Type of food business
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="/licence/company">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form class="form" action="/licence/check-your-answers" method="post">
+
+        {{ govukCheckboxes({
+          idPrefix: "type",
+          name: "type",
+          fieldset: {
+            legend: {
+              text: "Type of food business",
+              isPageHeading: true,
+              classes: "govuk-fieldset__legend--l"
+            }
+          },
+          hint: {
+            text: "Select all that apply"
+          },
+          items: [
+            {
+              text: "Staff restaurant/canteen/kitchen",
+              value: "Staff restaurant/canteen/kitchen",
+              checked: checked("type", "Staff restaurant/canteen/kitchen")
+            },
+            {
+              text: "Retailer (including farm shop)",
+              value: "Retailer (including farm shop)",
+              checked: checked("type", "Retailer (including farm shop)")
+            },
+            {
+              text: "Restaurant/Café/Snack Bar",
+              value: "Restaurant/Café/Snack Bar",
+              checked: checked("type", "Restaurant/Café/Snack Bar")
+            },
+            {
+              text: "Market/Market Stall",
+              value: "Market/Market Stall",
+              checked: checked("type", "Market/Market Stall")
+            },
+            {
+              text: "Takeaway",
+              value: "Takeaway",
+              checked: checked("type", "Takeaway")
+            },
+            {
+              text: "Hotel/pub/guest house",
+              value: "Hotel/pub/guest house",
+              checked: checked("type", "Hotel/pub/guest house")
+            },
+            {
+              text: "Food manufacturing or processing",
+              value: "Food manufacturing or processing",
+              checked: checked("type", "Food manufacturing or processing")
+            },
+            {
+              text: "Catering",
+              value: "Catering",
+              checked: checked("type", "Catering")
+            },
+            {
+              text: "Moveable establishment e.g. ice cream van",
+              value: "Moveable establishment e.g. ice cream van",
+              checked: checked("type", "Moveable establishment e.g. ice cream van")
+            },
+            {
+              text: "Private house used for a food business",
+              value: "Private house used for a food business",
+              checked: checked("type", "Private house used for a food business")
+            }
+          ]
+        }) }}
+
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

@@ -5,7 +5,7 @@
 {% endblock %}
 
 {% block beforeContent %}
-  <a class="govuk-back-link" href="/licence/treatment">Back</a>
+  <a class="govuk-back-link" href="/licence/type">Back</a>
 {% endblock %}
 
 {% block content %}
@@ -132,71 +132,17 @@
       <dl class="govuk-summary-list govuk-!-margin-bottom-9">
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
-            Are the premises under construction?
+            Food business type
           </dt>
           <dd class="govuk-summary-list__value">
-            {{ data['premises-under-construction'] }}
+            {% if data['type'] %}
+              {{ data['type'] | join("<br>") | safe }}
+            {% endif %}
           </dd>
           <dd class="govuk-summary-list__actions">
-            <a href="/licence/premises">
+            <a href="/licence/type">
               Change
-              <span class="govuk-visually-hidden"> answer</span>
-            </a>
-          </dd>
-        </div>
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            Are the premises commercial?
-          </dt>
-          <dd class="govuk-summary-list__value">
-            {{ data['premises-commercial'] }}
-          </dd>
-          <dd class="govuk-summary-list__actions">
-            <a href="/licence/premises">
-              Change
-              <span class="govuk-visually-hidden"> answer</span>
-            </a>
-          </dd>
-        </div>
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            Are the premises shared?
-          </dt>
-          <dd class="govuk-summary-list__value">
-            {{ data['premises-shared'] }}
-          </dd>
-          <dd class="govuk-summary-list__actions">
-            <a href="/licence/premises">
-              Change
-              <span class="govuk-visually-hidden"> answer</span>
-            </a>
-          </dd>
-        </div>
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            Business opening hours
-          </dt>
-          <dd class="govuk-summary-list__value">
-            {{ data['opening-hours'] }}
-          </dd>
-          <dd class="govuk-summary-list__actions">
-            <a href="/licence/premises">
-              Change
-              <span class="govuk-visually-hidden"> opening hours</span>
-            </a>
-          </dd>
-        </div>
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            Treatments
-          </dt>
-          <dd class="govuk-summary-list__value">
-            {{ data['treatment'] | join("<br>") | safe }}
-          </dd>
-          <dd class="govuk-summary-list__actions">
-            <a href="/licence/treatment">
-              Change
-              <span class="govuk-visually-hidden"> treatments</span>
+              <span class="govuk-visually-hidden"> food business type</span>
             </a>
           </dd>
         </div>
