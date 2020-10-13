@@ -34,7 +34,11 @@
         Register a food business
       </h1>
 
-      <p>When you start a new food business or take over an existing business, you must register with your local authority. You should do this at least 28 days before trading or before food operations start.</p>
+      <h2 class="govuk-heading-m">Overview</h2>
+
+      <p>When you start a new food business or take over an existing business, you must register with your local authority.</p>
+      <p>It’s free to register, and your registration cannot be refused.</p>
+      <p>You should register at least 28 days before opening. If you’re already trading and have not registered, you need to do this as soon as possible.</p>
 
       <a href="/licence/applicant" role="button" draggable="false" class="govuk-button govuk-button--start govuk-!-margin-top-2 govuk-!-margin-bottom-8"  data-module="govuk-button">
         Start now
@@ -45,16 +49,31 @@
 
       <h2 class="govuk-heading-m">Before you start</h2>
 
-      <p>During this registration, you may come across a few specialist terms, which we have described below:</p>
+      <h3 class="govuk-heading-s">Who needs to register</h3>
 
-      <h3 class="govuk-heading-s">Food business operator</h3>
-      <p>The operator is the person, charity or company who makes the decisions about the food business. They decide what it serves and how it operates.</p>
+      <p>A food business is anyone preparing, cooking, storing, handling, distributing, supplying or selling food.</p>
 
-      <h3 class="govuk-heading-s">Establishment</h3>
-      <p>The establishment is the location or site of your food business. If it is a mobile food business, please use the location where it is normally stored overnight.</p>
+      <p>Registration applies to food business like:</p>
 
-      <h3 class="govuk-heading-s">Registering Local Authority</h3>
-      <p>{{ data['company-borough'] }} is the local authority your registration will be sent to. Is this the correct local authority for your business? If unsure, please use this Food Business Registration link to check using the location or site of your food business.</p>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>restaurants, cafes and take-aways</li>
+        <li>catering businesses run from home, mobile catering and temporary businesses</li>
+        <li>food stalls, food pop ups and food vans</li>
+        <li>distance selling, mail order and food delivery</li>
+        <li>companies involved with food distribution or supply that operate from an office should register - even if no food is kept at the premises</li>
+      </ul>
+
+      <p>If you operate more than one premises, you need to register each premises with the local authority where it’s located.</p>
+
+      {{ govukWarningText({
+        text: "You may be fined, imprisoned for up to 2 years or both if you run a food business without registering.",
+        iconFallbackText: "Warning"
+      }) }}
+
+      <h3 class="govuk-heading-s">Food hygiene rating scheme</h3>
+
+      <p>Once registered, you may be inspected by your local authority.</p>
+      <p>Preparing thoroughly for inspection means your business has the best chance of getting a top rating (5) in the Food Hygiene Rating Scheme.</p>
 
     </div>
 
