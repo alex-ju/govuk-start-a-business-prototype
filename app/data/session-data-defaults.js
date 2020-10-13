@@ -189,12 +189,6 @@ module.exports = {
           // href: 'https://www.gov.uk/food-premises-approval/westminster',
           href: '/licence/start',
           body: 'Get in touch with your council for a premises licence if you run an establishment where meat, fish, egg or dairy products are handled.'
-        },
-        {
-          id: '51',
-          title: 'Tattoo, piercing and electrolysis licence (England and Wales)',
-          href: 'https://www.gov.uk/skin-piercing-and-tattooing/tower-hamlets',
-          body: 'You need to register with the relevant local council to get a tattoo, piercing and electrolysis licence in England and Wales'
         }
       ]
     },
