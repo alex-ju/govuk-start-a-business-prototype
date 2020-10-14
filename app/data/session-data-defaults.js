@@ -35,8 +35,6 @@ module.exports = {
   'officer-address-street': '72 Guild Street',
   'officer-address-city': 'London',
   'officer-address-postcode': 'SE23 6FH',
-  // 'officer-phone': '07700 900457',
-  // 'officer-email': 'sarah.phillips@example.com',
   'not-relevant': [],
   completed: ['10'],
   sections: [
@@ -174,7 +172,7 @@ module.exports = {
       title: 'Licences and licence application',
       reasons: [
         {
-          text: 'Your business is registered as: ',
+          text: 'The nature of your business is: ',
           data: 'company-sector'
         },
         {
