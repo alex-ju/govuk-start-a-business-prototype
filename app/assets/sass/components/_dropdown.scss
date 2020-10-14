@@ -50,6 +50,7 @@ $app-dropdown-arrow-spacing: $app-dropdown-arrow-size / 2;
     position: relative;
     top: 4px;
     float: right;
+    color: govuk-colour("dark-grey");
     @include govuk-shape-arrow($direction: down, $base: $app-dropdown-arrow-size, $display: inline-block);
   }
 
