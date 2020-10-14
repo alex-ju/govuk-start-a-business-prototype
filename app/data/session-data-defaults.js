@@ -23,7 +23,7 @@ module.exports = {
   'company-name': 'Acme Inc',
   'company-number': '01234567',
   'company-type': 'Private Limited Company',
-  'company-sector': 'Hairdressing and other beauty treatments', // nature of business
+  'company-sector': 'Food and beverage', // nature of business
   'company-address': '10 Whitechapel High St, London E1 8QS',
   'company-address-street': '10 Whitechapel High St',
   'company-address-city': 'London',
