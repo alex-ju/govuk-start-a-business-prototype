@@ -112,3 +112,9 @@ $govuk-assets-path: '/govuk/assets/';
     }
   }
 }
+
+.app-list-participants {
+  li {
+    margin-bottom: govuk-spacing(3);
+  }
+}
