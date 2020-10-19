@@ -41,16 +41,22 @@
 {% block content %}
 
   {% set resultsnr = 0 %}
+  {% set completednr = 0  %}
+  {% if data['answers-checked'] %}
+    {% set completednr = 1  %}
+  {% endif %}
   {% for section in data.sections %}
     {% set results = section.results | visible(data) | relevant(data) %}
     {% set resultsnr = resultsnr + results | length %}
+    {% set completed = section.results | visible(data) | completed(data) %}
+    {% set completednr = completednr + completed | length %}
   {% endfor %}
 
   <p>
     {% if notRelevantList %}
-      <a href="/next-steps">{{ resultsnr | dump }} results, 1 completed.</a>
+      <a href="/next-steps">{{ resultsnr | dump }} results, {{ completednr }} completed.</a>
     {% else %}
-      {{ resultsnr | dump }} results, 1 completed.
+      {{ resultsnr | dump }} results, {{ completednr }} completed.
     {% endif %}
 
     {% if data['not-relevant'] | length %}

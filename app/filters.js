@@ -70,6 +70,12 @@ module.exports = function (env) {
     }
   }
 
+  filters.completed = function (results, data) {
+    if (results) {
+      return results.filter(result => data.completed.includes(result.id))
+    }
+  }
+
   filters.isCompleted = function (result, data) {
     if (data) {
       return data.completed.includes(result.id) || (result.href === '/licence/start' && data['answers-checked'])
