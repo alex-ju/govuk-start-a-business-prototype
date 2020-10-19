@@ -41,4 +41,13 @@ router.get('/next-steps/:mode?', function (req, res, next) {
   res.render('next-steps', { notRelevantList })
 })
 
+router.get('/email-confirmation/:crn?', function (req, res, next) {
+  if (req.params.crn) {
+    req.session.data.crn = req.params.crn
+    res.redirect('/email-confirmation')
+  } else {
+    res.render('email-confirmation')
+  }
+})
+
 module.exports = router

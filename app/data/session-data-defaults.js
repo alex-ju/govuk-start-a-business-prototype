@@ -18,23 +18,6 @@ Example usage:
 */
 
 module.exports = {
-
-  // Insert values here
-  'company-name': 'Acme Inc',
-  'company-number': '01234567',
-  'company-type': 'Private Limited Company',
-  'company-sector': 'Food and beverage', // nature of business
-  'company-address': '10 Whitechapel High St, London E1 8QS',
-  'company-address-street': '10 Whitechapel High St',
-  'company-address-city': 'London',
-  'company-address-postcode': 'E1 8QS',
-  'company-borough': 'London Borough of Tower Hamlets',
-  'officer-name': 'Sarah Philips',
-  'officer-dob-month': '3',
-  'officer-dob-year': '1987',
-  'officer-address-street': '72 Guild Street',
-  'officer-address-city': 'London',
-  'officer-address-postcode': 'SE23 6FH',
   'not-relevant': [],
   completed: ['10'],
   sections: [

@@ -4,7 +4,7 @@
 {% from "components/result.html" import appResult %}
 
 {% block pageTitle %}
-  Next steps for {{ data['company-name'] }}
+  Next steps for {{ data.company['company-name'] }}
 {% endblock %}
 
 {% block hero %}
@@ -25,10 +25,10 @@
           Part of <a href="#">Business and self-employed</a>
         </span>
         <h1 class="govuk-heading-l">
-          Next steps for {{ data['company-name'] }}
+          Next steps for {{ data.company['company-name'] }}
         </h1>
         <p>
-          The information on this page is based on {{ data['company-name'] }}’s public company registration data.
+          The information on this page is based on {{ data.company['company-name'] }}’s public company registration data.
         </p>
 
         {% include "components/action-link.html" %}
@@ -73,7 +73,7 @@
             <p class="govuk-body">Because:</p>
             <ul class="govuk-list govuk-list--bullet">
               {% for reason in reasons %}
-                <li>{{ reason.text }} {{ data[reason.data] }}</li>
+                <li>{{ reason.text }} {{ data.company[reason.data] }}</li>
               {% endfor %}
             </ul>
           </aside>

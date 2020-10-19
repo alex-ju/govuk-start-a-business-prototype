@@ -15,7 +15,7 @@
       <hr class="govuk-section-break govuk-section-break--visible govuk-section-break govuk-section-break--l">
 
       <h1 class="govuk-heading-s">
-        Congratulations, {{ data['company-name'] }} is now registered as a company.
+        Congratulations, {{ data.company['company-name'] }} is now registered as a company.
       </h1>
 
       <p>
@@ -24,17 +24,17 @@
 
       <p>
         Company name: <br>
-        <b>{{ data['company-name'] }}</b>
+        <b>{{ data.company['company-name'] }}</b>
       </p>
 
       <p>
         Company number: <br>
-        <b>{{ data['company-number'] }}</b>
+        <b>{{ data.company['company-number'] }}</b>
       </p>
 
       <p>
         Company type: <br>
-        <b>{{ data['company-type'] }}</b>
+        <b>{{ data.company['company-type'] }}</b>
       </p>
 
       <p>
@@ -52,7 +52,7 @@
 
       <h2 class="govuk-heading-s">What happens next?</h2>
 
-      <p>Check out <a class="govuk-link" href="/next-steps">Next steps for {{ data['company-name'] }}</a>, which has tailored business information from GOV.UK.</p>
+      <p>Check out <a class="govuk-link" href="/next-steps">Next steps for {{ data.company['company-name'] }}</a>, which has tailored business information from GOV.UK.</p>
 
       <p>
         The company’s authentication code has been sent to the company’s registered office. You’ll need this to use Companies House’s WebFiling service.

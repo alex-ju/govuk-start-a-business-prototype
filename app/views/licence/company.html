@@ -26,7 +26,7 @@
           },
           id: "full-name",
           name: "company-name",
-          value: data['company-name'],
+          value: data.company['company-name'],
           autocomplete: "name",
           spellcheck: false
         }) }}
@@ -38,7 +38,7 @@
           },
           id: "full-name",
           name: "company-number",
-          value: data['company-number'],
+          value: data.company['company-number'],
           autocomplete: "name",
           spellcheck: false
         }) }}
@@ -56,7 +56,7 @@
             },
             id: "address-line-1",
             name: "company-address-street",
-            value: data['company-address-street'],
+            value: data.company['company-address-street'],
             autocomplete: "address-line1"
           }) }}
 
@@ -67,7 +67,7 @@
             classes: "govuk-!-width-two-thirds",
             id: "address-town",
             name: "company-address-city",
-            value: data['company-address-city'],
+            value: data.company['company-address-city'],
             autocomplete: "address-level2"
           }) }}
 
@@ -78,7 +78,7 @@
             classes: "govuk-input--width-10",
             id: "address-postcode",
             name: "company-address-postcode",
-            value: data['company-address-postcode'],
+            value: data.company['company-address-postcode'],
             autocomplete: "postal-code"
           }) }}
 

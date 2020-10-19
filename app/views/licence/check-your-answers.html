@@ -22,7 +22,7 @@
             Name
           </dt>
           <dd class="govuk-summary-list__value">
-            {{ data['officer-name'] }}
+            {{ data.company['officer-name'] }}
           </dd>
           <dd class="govuk-summary-list__actions">
             <a href="/licence/applicant">
@@ -36,7 +36,7 @@
             Date of birth
           </dt>
           <dd class="govuk-summary-list__value">
-            {{ data['officer-dob-day'] }} {{ data['officer-dob-month'] }} {{ data['officer-dob-year'] }}
+            {{ data['officer-dob-day'] }} {{ data.company['officer-dob-month'] }} {{ data.company['officer-dob-year'] }}
           </dd>
           <dd class="govuk-summary-list__actions">
             <a href="/licence/applicant">
@@ -50,9 +50,9 @@
             Correspondence address
           </dt>
           <dd class="govuk-summary-list__value">
-            {{ data['officer-address-street'] }}
-            <br>{{ data['officer-address-city'] }}
-            <br>{{ data['officer-address-postcode'] }}
+            {{ data.company['officer-address-street'] }}
+            <br>{{ data.company['officer-address-city'] }}
+            <br>{{ data.company['officer-address-postcode'] }}
           </dd>
           <dd class="govuk-summary-list__actions">
             <a href="/licence/applicant">
@@ -86,7 +86,7 @@
             Company name
           </dt>
           <dd class="govuk-summary-list__value">
-            {{ data['company-name'] }}
+            {{ data.company['company-name'] }}
           </dd>
           <dd class="govuk-summary-list__actions">
             <a href="/licence/company">
@@ -100,7 +100,7 @@
             Company registration number
           </dt>
           <dd class="govuk-summary-list__value">
-            {{ data['company-number'] }}
+            {{ data.company['company-number'] }}
           </dd>
           <dd class="govuk-summary-list__actions">
             <a href="/licence/company">
@@ -114,9 +114,9 @@
             Registered office address
           </dt>
           <dd class="govuk-summary-list__value">
-            {{ data['company-address-street'] }}
-            <br>{{ data['company-address-city'] }}
-            <br>{{ data['company-address-postcode'] }}
+            {{ data.company['company-address-street'] }}
+            <br>{{ data.company['company-address-city'] }}
+            <br>{{ data.company['company-address-postcode'] }}
           </dd>
           <dd class="govuk-summary-list__actions">
             <a href="/licence/company">

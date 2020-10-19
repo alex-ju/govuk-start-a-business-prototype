@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  Next steps for {{ data['company-name'] }}
+  Next steps for {{ data.company['company-name'] }}
 {% endblock %}
 
 {% block beforeContent %}
@@ -17,7 +17,7 @@
 
         {% from "govuk/components/radios/macro.njk" import govukRadios %}
 
-        <span class="govuk-caption-l">Next steps for {{ data['company-name'] }}</span>
+        <span class="govuk-caption-l">Next steps for {{ data.company['company-name'] }}</span>
         {{ govukCheckboxes({
           idPrefix: "intent",
           name: "intent",

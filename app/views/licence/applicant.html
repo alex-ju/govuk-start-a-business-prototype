@@ -26,7 +26,7 @@
           },
           id: "full-name",
           name: "officer-name",
-          value: data['officer-name'],
+          value: data.company['officer-name'],
           autocomplete: "name",
           spellcheck: false
         }) }}
@@ -49,12 +49,12 @@
             {
               "name": "month",
               "classes": "govuk-input--width-2",
-              "value": data['officer-dob-month']
+              "value": data.company['officer-dob-month']
             },
             {
               "name": "year",
               "classes": "govuk-input--width-4",
-              "value": data['officer-dob-year']
+              "value": data.company['officer-dob-year']
             }
           ]
         }) }}
@@ -75,7 +75,7 @@
             },
             id: "address-line-1",
             name: "officer-address-street",
-            value: data['officer-address-street'],
+            value: data.company['officer-address-street'],
             autocomplete: "address-line1"
           }) }}
 
@@ -86,7 +86,7 @@
             classes: "govuk-!-width-two-thirds",
             id: "address-town",
             name: "officer-address-city",
-            value: data['officer-address-city'],
+            value: data.company['officer-address-city'],
             autocomplete: "address-level2"
           }) }}
 
@@ -97,7 +97,7 @@
             classes: "govuk-input--width-10",
             id: "address-postcode",
             name: "officer-address-postcode",
-            value: data['officer-address-postcode'],
+            value: data.company['officer-address-postcode'],
             autocomplete: "postal-code"
           }) }}
 
