@@ -40,12 +40,19 @@
 
 {% block content %}
 
+  {% set resultsnr = 0 %}
+  {% for section in data.sections %}
+    {% set results = section.results | visible(data) | relevant(data) %}
+    {% set resultsnr = resultsnr + results | length %}
+  {% endfor %}
+
   <p>
     {% if notRelevantList %}
-      <a href="/next-steps">5 results, 1 completed.</a>
+      <a href="/next-steps">{{ resultsnr | dump }} results, 1 completed.</a>
     {% else %}
-      5 results, 1 completed.
+      {{ resultsnr | dump }} results, 1 completed.
     {% endif %}
+
     {% if data['not-relevant'] | length %}
       {% if notRelevantList %}
         {{ data['not-relevant'] | length }} marked as not relevant.
