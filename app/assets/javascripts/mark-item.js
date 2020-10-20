@@ -24,7 +24,7 @@ window.GOVUK.Modules = window.GOVUK.Modules || {};
     http.open('GET', url)
     http.send()
 
-    http.onreadystatechange = (e) => {
+    http.onreadystatechange = function (e) {
       console.log(http.responseText)
     }
   }
