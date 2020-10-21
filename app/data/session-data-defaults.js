@@ -29,7 +29,7 @@ module.exports = {
           data: 'company-type'
         },
         {
-          text: 'Your said your business will make more than £85,000 in a 12 month period',
+          text: 'You said your business will make more than £85,000 in a 12 month period',
           attribute: 'vat',
           value: 'yes'
         }
@@ -61,12 +61,12 @@ module.exports = {
       title: 'Business finance and support',
       reasons: [
         {
-          text: 'Your said your business stores or uses personal information',
+          text: 'You said your business stores or uses personal information',
           attribute: 'intent',
           value: 'data-protection'
         },
         {
-          text: 'Your said your business sells goods online',
+          text: 'You said your business sells goods online',
           attribute: 'intent',
           value: 'sell-online'
         }
@@ -102,7 +102,7 @@ module.exports = {
       title: 'Employing people',
       reasons: [
         {
-          text: 'Your said you want to employ someone',
+          text: 'You said you want to employ someone',
           attribute: 'employ',
           value: 'yes'
         }
@@ -122,12 +122,12 @@ module.exports = {
       title: 'Importing, exporting and doing business abroad',
       reasons: [
         {
-          text: 'Your said your business buys goods from abroad',
+          text: 'You said your business buys goods from abroad',
           attribute: 'intent',
           value: 'import'
         },
         {
-          text: 'Your said your business sells goods abroad',
+          text: 'You said your business sells goods abroad',
           attribute: 'intent',
           value: 'export'
         }
@@ -177,12 +177,12 @@ module.exports = {
       title: 'Sale of goods and services and data protection',
       reasons: [
         {
-          text: 'Your said your business stores or uses personal information',
+          text: 'You said your business stores or uses personal information',
           attribute: 'intent',
           value: 'data-protection'
         },
         {
-          text: 'Your said your business sells goods online',
+          text: 'You said your business sells goods online',
           attribute: 'intent',
           value: 'sell-online'
         }
