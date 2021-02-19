@@ -1,5 +1,45 @@
 # Unreleased
 
+# 9.12.1 (Patch release)
+
+## Fixes
+
+- [Pull request #987: Import the cookie banner macro as part of the layout](https://github.com/alphagov/govuk-prototype-kit/pull/987)
+
+# 9.12.0 (Feature release)
+
+## New features
+
+- [Pull request #985: Update to GOV.UK Frontend v3.11.0](https://github.com/alphagov/govuk-prototype-kit/pull/985)
+
+## Fixes
+
+- [Pull request #983: Remove the outdated 'GOV.UK uses cookies to make the site simpler' cookie banner](https://github.com/alphagov/govuk-prototype-kit/pull/983)
+
+# 9.11.2 (Patch release)
+
+## Fixes
+
+- [Pull request #971: Update to GOV.UK Frontend v3.10.1](https://github.com/alphagov/govuk-prototype-kit/pull/971)
+
+# 9.11.1 (Patch release)
+
+## Fixes
+
+- [Pull request #966: Import the notification banner macro as part of the layout](https://github.com/alphagov/govuk-prototype-kit/pull/966)
+
+# 9.11.0 (Feature release)
+
+## New features
+
+- [Pull request #962: Update to GOV.UK Frontend v3.10.0](https://github.com/alphagov/govuk-prototype-kit/pull/962)
+
+## Fixes
+
+- [Pull request #938: Update Marked module to fix security issue](https://github.com/alphagov/govuk-prototype-kit/pull/938)
+- [Pull request #944: Disable Browsersync ghostMode to stop interactions being mirrored across tabs and devices](https://github.com/alphagov/govuk-prototype-kit/pull/944)
+- [Pull request #948: Fix Sass files being copied to public directory](https://github.com/alphagov/govuk-prototype-kit/pull/948)
+
 # 9.10.1 (Patch release)
 
 - [Pull request #936: Update to GOV.UK Frontend v3.9.1](https://github.com/alphagov/govuk-prototype-kit/pull/936)
