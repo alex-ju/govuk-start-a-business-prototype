@@ -1,13 +1,9 @@
 <!-- Javascript -->
 <script src="/public/javascripts/jquery-1.11.3.js"></script>
-<script src="/public/javascripts/es5-polyfill.js"></script>
 
 {% for scriptUrl in extensionConfig.scripts %}
   <script src="{{scriptUrl}}"></script>
 {% endfor %}
-
-<script src="/public/javascripts/dropdown.js"></script>
-<script src="/public/javascripts/mark-item.js"></script>
 
 <script src="/public/javascripts/modules.js"></script>
 <script src="/public/javascripts/application.js"></script>

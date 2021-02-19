@@ -16,7 +16,6 @@ $govuk-assets-path: '/govuk/assets/';
 
 // Components that aren't in Frontend
 @import "components/action-link";
-@import "components/dropdown";
 
 // Add extra styles here, or re-organise the Sass files in whichever way makes most sense to you
 .app-hero {
@@ -97,18 +96,6 @@ $govuk-assets-path: '/govuk/assets/';
 
   .app-section {
     border-top: 0;
-  }
-
-  .app-c-toolbar-dropdown__title:hover,
-  .app-c-toolbar-dropdown__link,
-  .app-c-toolbar-dropdown__button {
-    background: govuk-colour('white');
-  }
-
-  .app-c-toolbar-dropdown[open] {
-    .app-c-toolbar-dropdown__title {
-      background: govuk-colour('white');
-    }
   }
 }
 
