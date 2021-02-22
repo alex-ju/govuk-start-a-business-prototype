@@ -71,7 +71,7 @@
 
         <div class="govuk-grid-column-two-thirds">
           {% for result in results %}
-            {{ appResult(result, data) }}
+            {{ appResult(result, true) }}
           {% endfor %}
         </div>
       </div>
@@ -97,7 +97,7 @@
           {% set maybes = section.results | maybe(data) %}
 
           {% for result in maybes %}
-            {{ appResult(result, data) }}
+            {{ appResult(result) }}
           {% endfor %}
         {% endfor %}
       </div>

@@ -1,7 +1,7 @@
 {% from "govuk/components/tag/macro.njk" import govukTag %}
 
-{% macro appResult(result, data) %}
-  <div class="app-result">
+{% macro appResult(result, highlight=false) %}
+  <div class="app-result{{ "--highlighted" if highlight}}">
     <h4 class="govuk-heading-s">
       <a href="{{ result.href }}">{{ result.title }}</a>
     </h4>
