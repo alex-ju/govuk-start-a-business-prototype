@@ -37,9 +37,23 @@ $govuk-assets-path: '/govuk/assets/';
   }
 }
 
+.app-category {
+  margin: govuk-spacing(6) 0;
+
+  h2 {
+    border-bottom: 3px solid govuk-colour("blue");
+    margin-bottom: 0;
+    padding: 0 0 20px;
+  }
+}
+
 .app-section {
   border-top: 1px solid $govuk-border-colour;
   padding-top: govuk-spacing(6);
+
+  &:nth-child(2) {
+    border-top: 0;
+  }
 }
 
 .app-aside {
