@@ -28,10 +28,8 @@
           Next steps for {{ data.company['company-name'] }}
         </h1>
         <p>
-          The information on this page is based on {{ data.company['company-name'] }}’s public company registration data.
+          You’ve registered your company - here’s what you need to do next to get {{ data.company['company-name'] }} up and running.
         </p>
-
-        {% include "components/action-link.html" %}
       </div>
     </div>
   </div>
@@ -39,6 +37,14 @@
 {% endblock %}
 
 {% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <p class="govuk-body">
+        We’ve used publicly-available information about {{ data.company['company-name'] }} to create this todo list - <a class="govuk-link" href="/question/vat">answer a few questions to tailor your results</a>.
+      </p>
+    </div>
+  </div>
 
   {% for section in data.sections %}
     {% set reasons = section.reasons | visible(data) %}
