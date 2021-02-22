@@ -18,8 +18,6 @@ Example usage:
 */
 
 module.exports = {
-  'not-relevant': [],
-  completed: ['10'],
   sections: [
     {
       title: 'Business tax',

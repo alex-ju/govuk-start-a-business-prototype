@@ -40,25 +40,9 @@
 
 {% block content %}
 
-  {% set resultsnr = 0 %}
-  {% set completednr = 0  %}
-  {% if data['answers-checked'] %}
-    {% set completednr = 1  %}
-  {% endif %}
   {% for section in data.sections %}
-    {% set results = section.results | visible(data) | relevant(data) %}
-    {% set resultsnr = resultsnr + results | length %}
-    {% set completed = section.results | visible(data) | completed(data) %}
-    {% set completednr = completednr + completed | length %}
-  {% endfor %}
-
-  {% for section in data.sections %}
-    {% if notRelevantList %}
-      {% set results = section.results | visible(data) | irelevant(data) %}
-    {% else %}
-      {% set reasons = section.reasons | visible(data) %}
-      {% set results = section.results | visible(data) | relevant(data) %}
-    {% endif %}
+    {% set reasons = section.reasons | visible(data) %}
+    {% set results = section.results | visible(data) %}
 
     {% if results | length %}
     <section class="app-section">
@@ -111,11 +95,7 @@
 
         <div class="govuk-grid-column-two-thirds">
           {% for section in data.sections %}
-            {% if notRelevantList %}
-              {% set maybes = section.results | maybe(data) | irelevant(data) %}
-            {% else %}
-              {% set maybes = section.results | maybe(data) | relevant(data) %}
-            {% endif %}
+            {% set maybes = section.results | maybe(data) %}
 
             {% for result in maybes %}
               {{ appResult(result, data) }}

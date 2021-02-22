@@ -2,14 +2,12 @@ const express = require('express')
 const router = express.Router()
 
 // Add your routes here - above the module.exports line
-router.get('/next-steps/:mode?', function (req, res, next) {
-  let notRelevantList = false
-
-  if (req.params.mode === 'not-relevant') {
-    notRelevantList = true
+router.get('/next-steps/', function (req, res, next) {
+  if (req.session.data.crn) {
+    res.render('next-steps')
+  } else {
+    res.redirect('/')
   }
-
-  res.render('next-steps', { notRelevantList })
 })
 
 router.get('/email-confirmation/:crn?', function (req, res, next) {

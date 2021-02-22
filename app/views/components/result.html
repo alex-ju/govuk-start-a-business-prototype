@@ -1,15 +1,9 @@
 {% from "govuk/components/tag/macro.njk" import govukTag %}
 
 {% macro appResult(result, data) %}
-  {% set completed = result | isCompleted(data) %}
-  {% set irelevant = result | isIrelevant(data) %}
-
   <div class="app-result">
     <h4 class="govuk-heading-s">
       <a href="{{ result.href }}">{{ result.title }}</a>
-      {% if completed %}
-        {{- govukTag({text: "Completed"}) }}
-      {% endif %}
     </h4>
     <p class="govuk-body">
       {{ result.body }}
