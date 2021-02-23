@@ -39,11 +39,11 @@ $govuk-assets-path: '/govuk/assets/';
 }
 
 .app-cta {
-  margin-top: govuk-spacing(4);
+  @include govuk-responsive-margin(4, "top");
 }
 
 .app-category {
-  margin: govuk-spacing(6) 0;
+  margin-bottom: govuk-spacing(6);
 
   h2 {
     border-bottom: 3px solid govuk-colour("blue");
