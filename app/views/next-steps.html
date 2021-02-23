@@ -28,7 +28,7 @@
           Next steps for {{ data.company['company-name'] }}
         </h1>
         <p>
-          You’ve registered your company - here’s what you need to do next to get {{ data.company['company-name'] }} up and running.
+          You’ve registered your company - here’s a list of some things you need to do to get {{ data.company['company-name'] }} up and running.
         </p>
       </div>
     </div>
@@ -40,9 +40,15 @@
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
+    {% if data.vat === 'yes' or data.vat === 'no' or data.vat === 'maybe' %}
     <p class="govuk-body">
-      We’ve used publicly-available information about {{ data.company['company-name'] }} to create this todo list - <a class="govuk-link" href="/question/vat">answer a few questions to tailor your results</a>.
+      <a class="govuk-link" href="/question/vat">Edit your answers about {{ data.company['company-name'] }}</a> to make these suggestions more accurate and relevant to you.
     </p>
+    {% else %}
+    <p class="govuk-body">
+      <a class="govuk-link" href="/question/vat">Answer 5 questions about {{ data.company['company-name'] }}</a> to make these suggestions more accurate and relevant to you.
+    </p>
+    {% endif %}
   </div>
 </div>
 
