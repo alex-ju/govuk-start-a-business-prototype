@@ -13,7 +13,7 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-      <form class="form" action="/next-steps" method="post">
+      <form class="form" action="/question/premises" method="post">
 
         {% from "govuk/components/radios/macro.njk" import govukRadios %}
 
@@ -23,7 +23,7 @@
           name: "support",
           fieldset: {
             legend: {
-              text: "Are you looking for financial support for:",
+              text: "Are you looking financial support for:",
               isPageHeading: true,
               classes: "govuk-fieldset__legend--l"
             }
@@ -41,7 +41,7 @@
             },
             {
               value: "covid-19",
-              text: "COVID-19",
+              text: "Coronavirus",
               checked: checked("support", "covid-19")
             },
             {

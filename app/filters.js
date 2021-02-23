@@ -47,16 +47,6 @@ module.exports = function (env) {
       ))
     }
   }
-
-  filters.maybe = function (results, data) {
-    if (results) {
-      return results.filter(result => (
-        (result.attribute === 'employ' && data.employ === 'maybe') ||
-        (result.attribute === 'vat' && data.vat === 'maybe') ||
-        (result.attribute === 'other')
-      ))
-    }
-  }
   /* ------------------------------------------------------------------
     keep the following line to return your filters to the app
   ------------------------------------------------------------------ */
