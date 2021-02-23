@@ -54,6 +54,18 @@ module.exports = {
     },
     {
       title: 'Business tax',
+      reasons: [
+        {
+          text: 'your turnover is more than £85,000',
+          attribute: 'vat',
+          value: 'yes'
+        },
+        {
+          text: 'your turnover might be more than £85,000 in future',
+          attribute: 'vat',
+          value: 'maybe'
+        }
+      ],
       results: [
         {
           id: '40',
@@ -75,6 +87,23 @@ module.exports = {
     },
     {
       title: 'Employing people',
+      reasons: [
+        {
+          text: 'you’re going to employ people',
+          attribute: 'employ',
+          value: 'yes'
+        },
+        {
+          text: 'you already employ people',
+          attribute: 'employ',
+          value: 'already-employ-someone'
+        },
+        {
+          text: 'you might employ people in future',
+          attribute: 'employ',
+          value: 'maybe'
+        }
+      ],
       results: [
         {
           id: '50',
@@ -104,6 +133,23 @@ module.exports = {
     },
     {
       title: 'Buying and selling abroad',
+      reasons: [
+        {
+          text: 'you buy items from abroad',
+          attribute: 'intent',
+          value: 'import'
+        },
+        {
+          text: 'you sell items to customers abroad',
+          attribute: 'intent',
+          value: 'export'
+        },
+        {
+          text: 'you sell items online',
+          attribute: 'intent',
+          value: 'sell-online'
+        }
+      ],
       results: [
         {
           id: '60',
@@ -133,6 +179,23 @@ module.exports = {
     },
     {
       title: 'Money and support',
+      reasons: [
+        {
+          text: 'you’re looking for help to get started',
+          attribute: 'support',
+          value: 'getting-started'
+        },
+        {
+          text: 'you’re looking for help to grow your business',
+          attribute: 'support',
+          value: 'growing'
+        },
+        {
+          text: 'you’re looking for help because of coronavirus',
+          attribute: 'support',
+          value: 'covid-19'
+        }
+      ],
       results: [
         {
           id: '70',
@@ -170,6 +233,18 @@ module.exports = {
     },
     {
       title: 'Business location',
+      reasons: [
+        {
+          text: 'you’re running your business from home',
+          attribute: 'premises',
+          value: 'home'
+        },
+        {
+          text: 'you’re running your business from a rented premises',
+          attribute: 'premises',
+          value: 'renting'
+        }
+      ],
       results: [
         {
           id: '80',
@@ -223,6 +298,13 @@ module.exports = {
     },
     {
       title: 'Business rates',
+      reasons: [
+        {
+          text: 'you’re running your business from home',
+          attribute: 'premises',
+          value: 'home'
+        }
+      ],
       results: [
         {
           id: '30',
@@ -260,6 +342,13 @@ module.exports = {
     },
     {
       title: 'Business tax',
+      reasons: [
+        {
+          text: 'your turnover will be less than £85,000',
+          attribute: 'vat',
+          value: 'no'
+        }
+      ],
       results: [
         {
           id: '30',

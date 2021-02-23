@@ -57,7 +57,11 @@ $govuk-assets-path: '/govuk/assets/';
 }
 
 .app-aside {
-  .govuk-body,
+  .govuk-body {
+    @include govuk-font(16);
+    margin-bottom: govuk-spacing(1);
+  }
+
   .govuk-list {
     @include govuk-font(16);
   }
