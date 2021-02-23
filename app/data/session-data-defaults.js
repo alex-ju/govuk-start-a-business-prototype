@@ -20,202 +20,90 @@ Example usage:
 module.exports = {
   sections: [
     {
-      title: 'Business tax',
+      title: 'Corporation Tax',
       reasons: [
         {
-          text: 'Your business is registered as: ',
-          data: 'company-type'
-        },
-        {
-          text: 'You said your business will make more than £85,000 in a 12 month period',
-          attribute: 'vat',
-          value: 'yes'
+          text: 'You many need to register for corporation tax if you haven’t already',
         }
       ],
       results: [
         {
           id: '10',
-          title: 'Register your company',
-          href: 'https://www.gov.uk/limited-company-formation/register-your-company',
-          body: 'You’ll get a ‘certificate of incorporation’. This confirms the company legally exists and shows the company number and date of formation.'
-        },
-        {
-          id: '11',
           title: 'Register for Corporation Tax',
-          href: 'https://www.gov.uk/limited-company-formation/set-up-your-company-for-corporation-tax',
-          body: 'Register within 3 months of starting to do business. This includes buying, selling, advertising, renting a property and employing someone.'
-        },
-        {
-          id: '12',
-          title: 'VAT registration',
-          href: 'https://www.gov.uk/vat-registration',
-          body: 'You must register your business for VAT with HM Revenue and Customs (HMRC) if its VAT taxable turnover is more than £85,000.',
-          attribute: 'vat',
-          value: 'yes'
+          href: 'https://www.gov.uk/corporation-tax',
+          body: 'You need to register for corporation tax within 3 months of starting to do business.'
         }
       ]
     },
     {
-      title: 'Business finance and support',
-      reasons: [
-        {
-          text: 'You said your business stores or uses personal information',
-          attribute: 'intent',
-          value: 'data-protection'
-        },
-        {
-          text: 'You said your business sells goods online',
-          attribute: 'intent',
-          value: 'sell-online'
-        }
-      ],
+      title: 'Competion law',
       results: [
         {
           id: '20',
-          title: 'Apply for a Start Up Loan for your business',
-          href: 'https://www.gov.uk/apply-start-up-loan',
-          body: 'Loans and mentoring for people looking to start or grow a business in England, Scotland, Wales and Northern Ireland.',
-          attribute: 'support',
-          value: 'getting-started'
-        },
-        {
-          id: '21',
-          title: 'Finance and support for your business',
-          href: 'https://www.gov.uk/business-finance-support?regions%5B%5D=london',
-          body: 'Find government-backed support and finance for business',
-          attribute: 'support',
-          value: 'growing'
-        },
-        {
-          id: '22',
-          title: 'Find coronavirus financial support for your business',
-          href: 'https://www.gov.uk/business-coronavirus-support-finder',
-          body: 'Coronavirus support is available to employers and the self-employed. You may be eligible for loans, tax relief and cash grants, whether your business is open or closed. Use this business support finder to see what support is available for you and your business.',
-          attribute: 'support',
-          value: 'covid-19'
+          title: 'Avoid anti-competitive activity',
+          href: 'https://www.gov.uk/cartels-price-fixing/types-of-anticompetitive-activity',
+          body: 'You need to understand rules around price-fixing and competition.'
         }
       ]
     },
     {
-      title: 'Employing people',
-      reasons: [
-        {
-          text: 'You said you want to employ someone',
-          attribute: 'employ',
-          value: 'yes'
-        }
-      ],
+      title: 'Data protection',
       results: [
         {
           id: '30',
-          title: 'Get your business ready to employ staff',
-          href: 'https://www.gov.uk/get-ready-to-employ-someone',
-          body: 'You need to register as an employer with HM Revenue and Customs (HMRC) when you start employing staff, or using subcontractors for construction work.',
-          attribute: 'employ',
-          value: 'yes'
+          title: 'Dealing with personal information',
+          href: 'https://www.gov.uk/data-protection-your-business',
+          body: 'If your business stores anyone’s personal information, you need to know how to look after it.'
+        }
+      ]
+    },
+  ],
+  check: [
+    {
+      title: 'Personal tax',
+      results: [
+        {
+          id: '10',
+          title: 'Check if you need to send a Self Assessment',
+          href: 'https://www.gov.uk/check-if-you-need-tax-return',
+          body: 'You might need to send a tax return if you have any untaxed income, such as dividends.'
         }
       ]
     },
     {
-      title: 'Importing, exporting and doing business abroad',
-      reasons: [
-        {
-          text: 'You said your business buys goods from abroad',
-          attribute: 'intent',
-          value: 'import'
-        },
-        {
-          text: 'You said your business sells goods abroad',
-          attribute: 'intent',
-          value: 'export'
-        }
-      ],
+      title: 'Licences and certificates',
       results: [
         {
-          id: '40',
-          title: 'Starting to import',
-          href: 'https://www.gov.uk/starting-to-import',
-          body: 'Importing goods and services into the UK - commodity codes, VAT and duty.',
-          attribute: 'intent',
-          value: 'import'
-        },
+          id: '20',
+          title: 'Check if you need a licence for your business',
+          href: 'https://www.gov.uk/licence-finder/',
+          body: 'You might need a licence, depending on the type of work you do.'
+        }
+      ]
+    },
+  ],
+  maybe: [
+    {
+      title: 'Health and safety',
+      results: [
         {
-          id: '41',
-          title: 'Exporting and doing business abroad',
-          href: 'https://www.gov.uk/starting-to-export',
-          body: 'What to do with exporting goods to other countries, including checking if you need a licence.',
-          attribute: 'intent',
-          value: 'export'
+          id: '10',
+          title: 'Health and safety at work',
+          href: 'https://www.hse.gov.uk/guidance/index.htm',
+          body: 'How to keep your employees and customers safe.'
         }
       ]
     },
     {
-      title: 'Licences and licence application',
-      reasons: [
-        {
-          text: 'The nature of your business is: ',
-          data: 'company-sector'
-        },
-        {
-          text: 'Your business address is: ',
-          data: 'company-address'
-        }
-      ],
+      title: 'Running a business',
       results: [
         {
-          id: '50',
-          title: 'Register a food business',
-          // href: 'https://www.gov.uk/food-premises-approval/westminster',
-          href: '/licence/start',
-          body: 'Get in touch with your council for a premises licence if you run an establishment where meat, fish, egg or dairy products are handled.'
+          id: '20',
+          title: 'Starting a business guidance',
+          href: 'https://www.gov.uk/browse/business/setting-up',
+          body: 'Information about starting and growing your business.'
         }
       ]
     },
-    {
-      title: 'Sale of goods and services and data protection',
-      reasons: [
-        {
-          text: 'You said your business stores or uses personal information',
-          attribute: 'intent',
-          value: 'data-protection'
-        },
-        {
-          text: 'You said your business sells goods online',
-          attribute: 'intent',
-          value: 'sell-online'
-        }
-      ],
-      results: [
-        {
-          id: '60',
-          title: 'Notification to process personal data',
-          href: 'https://www.gov.uk/notification-to-process-personal-data',
-          body: 'You must notify the Information Commissioner’s Office (ICO) if your organisation processes personal data in an automated form.',
-          attribute: 'intent',
-          value: 'data-protection'
-        },
-        {
-          id: '61',
-          title: 'Online and distance selling',
-          href: 'https://www.gov.uk/online-and-distance-selling-for-businesses',
-          body: 'Rules for online and distance selling for businesses.',
-          attribute: 'intent',
-          value: 'sell-online'
-        }
-      ]
-    },
-    {
-      title: 'You may also be interested in',
-      results: [
-        {
-          id: '70',
-          title: 'Intellectual property and your work',
-          href: 'https://www.gov.uk/intellectual-property-an-overview',
-          body: 'What intellectual property is, how you can protect it, and which of copyright, patents, design right and trade marks applies to your work.',
-          attribute: 'other',
-          value: 'true'
-        }
-      ]
-    }
   ]
 }

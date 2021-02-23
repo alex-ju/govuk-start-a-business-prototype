@@ -1,7 +1,7 @@
 
 {% extends "layout.html" %}
 
-{% from "components/result.html" import appResult %}
+{% from "components/sections.html" import appSections %}
 
 {% block pageTitle %}
   Next steps for {{ data.company['company-name'] }}
@@ -48,61 +48,17 @@
 
 <section class="app-category">
   <h2 class="govuk-heading-l">What you need to do soon</h2>
-  {% for section in data.sections %}
-    {% set reasons = section.reasons | visible(data) %}
-    {% set results = section.results | visible(data) %}
-
-    {% if results | length %}
-    <section class="app-section">
-      <div class="govuk-grid-row">
-        <div class="govuk-grid-column-one-third">
-          <h3 class="govuk-heading-m">{{ section.title }}</h3>
-          {% if reasons | length %}
-          <aside class="app-aside">
-            <p class="govuk-body">Because:</p>
-            <ul class="govuk-list govuk-list--bullet">
-              {% for reason in reasons %}
-                <li>{{ reason.text }} {{ data.company[reason.data] }}</li>
-              {% endfor %}
-            </ul>
-          </aside>
-          {% endif %}
-        </div>
-
-        <div class="govuk-grid-column-two-thirds">
-          {% for result in results %}
-            {{ appResult(result, true) }}
-          {% endfor %}
-        </div>
-      </div>
-    </section>
-    {% endif %}
-  {% endfor %}
+  {{ appSections(data, data.sections, true) }}
 </section>
 
 <section class="app-category">
   <h2 class="govuk-heading-l">Check if you need</h2>
+  {{ appSections(data, data.check, true) }}
 </section>
 
 <section class="app-category">
   <h2 class="govuk-heading-l">Good to know</h2>
-  <section class="app-section">
-    <div class="govuk-grid-row">
-      <div class="govuk-grid-column-one-third">
-        <h3 class="govuk-heading-m">You may also be interested&nbsp;in</h3>
-      </div>
-
-      <div class="govuk-grid-column-two-thirds">
-        {% for section in data.sections %}
-          {% set maybes = section.results | maybe(data) %}
-
-          {% for result in maybes %}
-            {{ appResult(result) }}
-          {% endfor %}
-        {% endfor %}
-      </div>
-    </div>
-  </section>
+  {{ appSections(data, data.maybe) }}
 </section>
 
 <form id="next-steps"></form>
