@@ -1,6 +1,7 @@
 
 {% extends "layout.html" %}
 
+{% from "components/action-link.html" import appActionLink %}
 {% from "components/sections.html" import appSections %}
 
 {% block pageTitle %}
@@ -38,19 +39,7 @@
 
 {% block content %}
 
-<div class="govuk-grid-row">
-  <div class="govuk-grid-column-two-thirds">
-    {% if data.vat === 'yes' or data.vat === 'no' or data.vat === 'maybe' %}
-    <p class="govuk-body">
-      <a class="govuk-link" href="/question/vat">Edit your answers about {{ data.company['company-name'] }}</a> to make these suggestions more accurate and relevant to you.
-    </p>
-    {% else %}
-    <p class="govuk-body">
-      <a class="govuk-link" href="/question/vat">Answer 5 questions about {{ data.company['company-name'] }}</a> to make these suggestions more accurate and relevant to you.
-    </p>
-    {% endif %}
-  </div>
-</div>
+{{ appActionLink(data) }}
 
 <section class="app-category">
   <h2 class="govuk-heading-l">What you need to do soon</h2>
