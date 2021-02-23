@@ -1,13 +1,15 @@
 {% macro appActionLink(data) %}
+<div class="app-cta">
   {% if data.vat === 'yes' or data.vat === 'no' or data.vat === 'maybe' %}
+  <p class="govuk-body">
+    <a class="govuk-link" href="/question/vat">Edit your answers about {{ data.company['company-name'] }}</a> to make these suggestions more accurate and relevant to you.
+  </p>
+  {% else %}
   <div class="gem-c-action-link gem-c-action-link--small-icon">
     <span class="gem-c-action-link__link-wrapper">
       <a class="govuk-link" href="/question/vat">Answer 5 questions about {{ data.company['company-name'] }}</a> to make these suggestions more accurate and relevant to you.
     </span>
   </div>
-  {% else %}
-  <p class="govuk-body">
-    <a class="govuk-link" href="/question/vat">Edit your answers about {{ data.company['company-name'] }}</a> to make these suggestions more accurate and relevant to you.
-  </p>
   {% endif %}
+</div>
 {% endmacro %}

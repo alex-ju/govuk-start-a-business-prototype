@@ -38,6 +38,10 @@ $govuk-assets-path: '/govuk/assets/';
   }
 }
 
+.app-cta {
+  margin-top: govuk-spacing(4);
+}
+
 .app-category {
   margin: govuk-spacing(6) 0;
 
