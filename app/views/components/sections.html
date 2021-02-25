@@ -12,7 +12,7 @@
           <h3 class="govuk-heading-m">{{ section.title }}</h3>
           {% if reasons | length %}
           <aside class="app-aside">
-            <p class="govuk-body">Because:</p>
+            <p class="govuk-body">Because you said:</p>
             <ul class="govuk-list govuk-list--bullet">
               {% for reason in reasons %}
                 <li>{{ reason.text }} {{ data.company[reason.data] }}</li>
