@@ -15,7 +15,7 @@
             <p class="govuk-body">Because you said:</p>
             <ul class="govuk-list govuk-list--bullet">
               {% for reason in reasons %}
-                <li>{{ reason.text }} {{ data.company[reason.data] }}</li>
+                <li>{{ reason.text }} {{ data.company[reason.data] }} (<a href="/question/{{ reason.attribute }}" class="govuk-link">edit</a>)</li>
               {% endfor %}
             </ul>
           </aside>
