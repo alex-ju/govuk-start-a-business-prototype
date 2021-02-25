@@ -31,7 +31,7 @@ module.exports = {
       ]
     },
     {
-      title: 'Competion law',
+      title: 'Competition law',
       results: [
         {
           id: '20',
@@ -132,7 +132,7 @@ module.exports = {
       ]
     },
     {
-      title: 'Buying and selling abroad',
+      title: 'Buying and selling',
       reasons: [
         {
           text: 'you buy items from abroad',
