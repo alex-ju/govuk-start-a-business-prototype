@@ -20,13 +20,41 @@ Example usage:
 module.exports = {
   sections: [
     {
-      title: 'Corporation Tax',
+      title: 'Business tax',
+      reasons: [
+        {
+          text: 'your turnover is more than £85,000',
+          attribute: 'vat',
+          value: 'yes'
+        },
+        {
+          text: 'your turnover might be more than £85,000 in future',
+          attribute: 'vat',
+          value: 'maybe'
+        }
+      ],
       results: [
         {
           id: '10',
           title: 'Register for Corporation Tax',
           href: 'https://www.gov.uk/corporation-tax',
           body: 'You need to register for corporation tax within 3 months of starting to do business.'
+        },
+        {
+          id: '11',
+          title: 'Register for VAT',
+          href: 'https://www.gov.uk/vat-registration',
+          body: 'You need to register your business for VAT if your VAT taxable turnover is more than £85,000.',
+          attribute: 'vat',
+          value: 'yes'
+        },
+        {
+          id: '12',
+          title: 'You might need to register for VAT',
+          href: 'https://www.gov.uk/vat-registration/when-to-register',
+          body: 'If your turnover is going to be more than £85,000, you need to register for VAT.',
+          attribute: 'vat',
+          value: 'maybe'
         }
       ]
     },
@@ -49,39 +77,6 @@ module.exports = {
           title: 'Dealing with personal information',
           href: 'https://www.gov.uk/data-protection-your-business',
           body: 'If your business stores anyone’s personal information, you need to know how to look after it.'
-        }
-      ]
-    },
-    {
-      title: 'Business tax',
-      reasons: [
-        {
-          text: 'your turnover is more than £85,000',
-          attribute: 'vat',
-          value: 'yes'
-        },
-        {
-          text: 'your turnover might be more than £85,000 in future',
-          attribute: 'vat',
-          value: 'maybe'
-        }
-      ],
-      results: [
-        {
-          id: '40',
-          title: 'Register for VAT',
-          href: 'https://www.gov.uk/vat-registration',
-          body: 'You need to register your business for VAT if its VAT taxable turnover is more than £85,000.',
-          attribute: 'vat',
-          value: 'yes'
-        },
-        {
-          id: '41',
-          title: 'You might need to register for VAT',
-          href: 'https://www.gov.uk/vat-registration/when-to-register',
-          body: 'If your turnover is going to be more than £85,000, you need to register for VAT.',
-          attribute: 'vat',
-          value: 'maybe'
         }
       ]
     },
@@ -258,7 +253,7 @@ module.exports = {
           id: '81',
           title: 'Your resonsibilities when renting',
           href: 'https://www.gov.uk/renting-business-property-tenant-responsibilities',
-          body: 'Follow health and safety rules and make repairs when required by your lease.',
+          body: 'Follow health and safety rules, and make repairs when required by your lease.',
           attribute: 'premises',
           value: 'renting'
         },
@@ -297,7 +292,7 @@ module.exports = {
       ]
     },
     {
-      title: 'Business rates',
+      title: 'Business location',
       reasons: [
         {
           text: 'you’re running your business from home',
@@ -310,7 +305,7 @@ module.exports = {
           id: '30',
           title: 'Check if you need to pay business rates',
           href: 'https://www.gov.uk/introduction-to-business-rates/working-at-home',
-          body: 'You might need to pay business rates depending on the work you do at home.',
+          body: 'You might need to pay business rates, depending on what sort of work you do at home.',
           attribute: 'premises',
           value: 'home'
         }
