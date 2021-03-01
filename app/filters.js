@@ -43,6 +43,7 @@ module.exports = function (env) {
       return results.filter(result => (
         result.attribute == null ||
         data[result.attribute] === result.value ||
+        data.company[result.attribute] === result.value ||
         (data[result.attribute] && data[result.attribute].includes(result.value))
       ))
     }

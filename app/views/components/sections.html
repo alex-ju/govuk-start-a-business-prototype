@@ -15,7 +15,11 @@
             <p class="govuk-body">Because you said:</p>
             <ul class="govuk-list govuk-list--bullet">
               {% for reason in reasons %}
-                <li>{{ reason.text }} {{ data.company[reason.data] }} (<a href="/question/{{ reason.attribute }}" class="govuk-link">edit</a>)</li>
+                {% if reason.attribute !== 'company-sector' %}
+                  <li>{{ reason.text }} {{ data.company[reason.data] }} (<a href="/question/{{ reason.attribute }}" class="govuk-link">edit</a>)</li>
+                {% else %}
+                  <li>{{ reason.text }} {{ data.company[reason.data] }}</li>
+                {% endif %}
               {% endfor %}
             </ul>
           </aside>

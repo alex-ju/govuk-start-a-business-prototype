@@ -282,12 +282,77 @@ module.exports = {
     },
     {
       title: 'Licences and certificates',
+      reasons: [
+        {
+          text: 'your company lets and operates its own or leased real estate',
+          attribute: 'company-sector',
+          value: 'Other letting and operating of own or leased real estate'
+        },
+        {
+          text: 'your company offers hairdressing and other beauty treatment',
+          attribute: 'company-sector',
+          value: 'Hairdressing and other beauty treatment'
+        },
+        {
+          text: 'your company offers travel agency services',
+          attribute: 'company-sector',
+          value: 'Travel agency activities'
+        }
+      ],
       results: [
         {
           id: '20',
-          title: 'Check if you need a licence for your business',
+          title: 'Apply for a ‘house in multiple occupation’ (HMO) licence',
+          href: 'https://www.gov.uk/house-in-multiple-occupation-licence',
+          body: 'You might need an HMO licence if you rent your property to 3 or more people if they’re not a family.',
+          attribute: 'company-sector',
+          value: 'Other letting and operating of own or leased real estate'
+        },
+        {
+          id: '21',
+          title: 'Apply for a social housing provider licence',
+          href: 'https://www.gov.uk/social-housing-provider-registration',
+          body: 'If you want to provide social housing, you need to register with the Regulator of Social Housing.',
+          attribute: 'company-sector',
+          value: 'Other letting and operating of own or leased real estate'
+        },
+        {
+          id: '22',
+          title: 'Register your hairdressing business',
+          href: 'https://www.gov.uk/register-a-hairdressing-business',
+          body: 'You might need to register your hairdressers with your local council.',
+          attribute: 'company-sector',
+          value: 'Hairdressing and other beauty treatment'
+        },
+        {
+          id: '23',
+          title: 'Tell the ICO if you process personal information',
+          href: 'https://www.gov.uk/notification-to-process-personal-data',
+          body: 'If you process personal information in an automated form, you need to tell the ICO.',
+          attribute: 'company-sector',
+          value: 'Hairdressing and other beauty treatment'
+        },
+        {
+          id: '24',
+          title: 'Apply for an Air Travel Organiser’s Licence (ATOL)',
+          href: 'https://www.gov.uk/air-travel-organisers-licence',
+          body: 'You need an ATOL if you plan to sell holidays.',
+          attribute: 'company-sector',
+          value: 'Travel agency activities'
+        },
+        {
+          id: '25', // duplicate of 23
+          title: 'Tell the ICO if you process personal information',
+          href: 'https://www.gov.uk/notification-to-process-personal-data',
+          body: 'If you process personal information in an automated form, you need to tell the ICO.',
+          attribute: 'company-sector',
+          value: 'Travel agency activities'
+        },
+        {
+          id: '29',
+          title: 'Check if you need any licences for your business',
           href: 'https://www.gov.uk/licence-finder/',
-          body: 'You might need a licence, depending on the type of work you do.'
+          body: 'You might need licences, depending on the type of work you do.'
         }
       ]
     },
