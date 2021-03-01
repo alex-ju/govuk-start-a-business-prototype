@@ -38,7 +38,7 @@ module.exports = {
           id: '10',
           title: 'Register for Corporation Tax',
           href: 'https://www.gov.uk/corporation-tax',
-          body: 'You need to register for corporation tax within 3 months of starting to do business.'
+          body: 'You need to register for corporation tax within 3 months of starting to do business, if you haven’t done so already.'
         },
         {
           id: '11',
