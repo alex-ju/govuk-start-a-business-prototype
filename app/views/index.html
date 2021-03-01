@@ -17,30 +17,18 @@
       <h2 class="govuk-heading-m">Start a business</h2>
 
       <h3 class="govuk-heading-s">
-        Discovery: first round of user research
+        Discovery: second round of user research
       </h3>
 
       <ul class="govuk-list app-list-participants">
-        <li>
-          <a href="/email-confirmation/12746208">Participant 1</a>
-          <br>https://govuk-start-a-business-proto.herokuapp.com/email-confirmation/12746208
-        </li>
-        <li>
-          <a href="/email-confirmation/12206929">Participant 2</a>
-          <br>https://govuk-start-a-business-proto.herokuapp.com/email-confirmation/12206929
-        </li>
-        <li>
-          <a href="/email-confirmation/12927782">Participant 3</a>
-          <br>https://govuk-start-a-business-proto.herokuapp.com/email-confirmation/12927782
-        </li>
-        <li>
-          <a href="/email-confirmation/12482815">Participant 4</a>
-          <br>https://govuk-start-a-business-proto.herokuapp.com/email-confirmation/12482815
-        </li>
-        <li>
-          <a href="/email-confirmation/12625236">Participant 5</a>
-          <br>https://govuk-start-a-business-proto.herokuapp.com/email-confirmation/12625236
-        </li>
+        {% for company in data.companies %}
+          <li>
+            <a href="/email-confirmation/{{ company['company-number'] }}">Participant {{ loop.index }}</a>
+            <br>https://govuk-start-a-business-proto.herokuapp.com/email-confirmation/{{ company['company-number'] }}
+          </li>
+        {% else %}
+          <li>No participants added</li>
+        {% endfor %}
       </ul>
 
       <h3 class="govuk-heading-s">
