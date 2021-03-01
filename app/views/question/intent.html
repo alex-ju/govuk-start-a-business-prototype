@@ -21,6 +21,10 @@
         {{ govukCheckboxes({
           idPrefix: "intent",
           name: "intent",
+          attributes: {
+            "data-module": "govuk-checkboxes",
+            "data-exclusive": "true"
+          },
           fieldset: {
             legend: {
               text: "Does your business do any of the following?",
@@ -47,6 +51,9 @@
             {
               value: "none",
               text: "None of the above",
+              attributes: {
+                "data-exclusive": "true"
+              },
               checked: checked("intent", "none")
             }
           ]

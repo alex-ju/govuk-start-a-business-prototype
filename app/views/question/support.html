@@ -21,6 +21,10 @@
         {{ govukCheckboxes({
           idPrefix: "support",
           name: "support",
+          attributes: {
+            "data-module": "govuk-checkboxes",
+            "data-exclusive": "true"
+          },
           fieldset: {
             legend: {
               text: "Are you looking financial support for:",
@@ -47,6 +51,9 @@
             {
               value: "none",
               text: "None of the above",
+              attributes: {
+                "data-exclusive": "true"
+              },
               checked: checked("support", "none")
             }
           ]
