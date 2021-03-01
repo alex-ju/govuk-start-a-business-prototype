@@ -1,0 +1,18 @@
+{% macro appReason(result) %}
+  {% if result.reason | length %}
+  <aside class="app-aside">
+    <p class="govuk-body">Because you said:</p>
+    <ul class="govuk-list govuk-list--bullet">
+      <li>
+        {{ result.reason }}
+
+        {% if result.attribute !== 'company-sector' %}
+          (<a href="/question/{{ result.attribute }}?ref=next-steps" class="govuk-link">edit</a>)
+        {% endif %}
+      </li>
+    </ul>
+  </aside>
+  {% else %}
+    &nbsp;
+  {% endif %}
+{% endmacro %}

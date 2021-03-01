@@ -1,37 +1,25 @@
+{% from "components/reason.html" import appReason %}
 {% from "components/result.html" import appResult %}
 
 {% macro appSections(data, dataset, important=false) %}
   {% for section in dataset %}
-    {% set reasons = section.reasons | visible(data) %}
     {% set results = section.results | visible(data) %}
 
     {% if results | length %}
     <section class="app-section">
-      <div class="govuk-grid-row">
-        <div class="govuk-grid-column-one-third">
-          <h3 class="govuk-heading-m">{{ section.title }}</h3>
-          {% if reasons | length %}
-          <aside class="app-aside">
-            <p class="govuk-body">Because you said:</p>
-            <ul class="govuk-list govuk-list--bullet">
-              {% for reason in reasons %}
-                {% if reason.attribute !== 'company-sector' %}
-                  <li>{{ reason.text }} {{ data.company[reason.data] }} (<a href="/question/{{ reason.attribute }}?ref=next-steps" class="govuk-link">edit</a>)</li>
-                {% else %}
-                  <li>{{ reason.text }} {{ data.company[reason.data] }}</li>
-                {% endif %}
-              {% endfor %}
-            </ul>
-          </aside>
-          {% endif %}
-        </div>
-
-        <div class="govuk-grid-column-two-thirds">
-          {% for result in results %}
+      {% for result in results %}
+        <div class="govuk-grid-row">
+          <div class="govuk-grid-column-one-third">
+            {% if loop.index === 1 %}
+              <h3 class="govuk-heading-m">{{ section.title }}</h3>
+            {% endif %}
+            {{ appReason(result) }}
+          </div>
+          <div class="govuk-grid-column-two-thirds">
             {{ appResult(result, important) }}
-          {% endfor %}
+          </div>
         </div>
-      </div>
+      {% endfor %}
     </section>
     {% endif %}
   {% endfor %}
