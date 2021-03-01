@@ -24,7 +24,7 @@
         {% for company in data.companies %}
           <li>
             <a href="/email-confirmation/{{ company['company-number'] }}">Participant {{ loop.index }}</a>
-            <br>https://govuk-start-a-business-proto.herokuapp.com/email-confirmation/{{ company['company-number'] }}
+            <br>https://suitcase:dungeness@govuk-start-a-business-proto.herokuapp.com/email-confirmation/{{ company['company-number'] }}
           </li>
         {% else %}
           <li>No participants added</li>
