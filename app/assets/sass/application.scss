@@ -102,6 +102,10 @@ $govuk-assets-path: '/govuk/assets/';
   border-left: 5px solid govuk-colour("blue");
   padding: govuk-spacing(3);
   margin-bottom: govuk-spacing(6);
+
+  .govuk-body:last-child {
+    margin-bottom: govuk-spacing(1);
+  }
 }
 
 .app-sign-up {
