@@ -7,36 +7,25 @@
   Next steps for {{ data.company['company-name'] }}
 {% endblock %}
 
-{% block hero %}
-<div class="app-hero">
-  <div class="govuk-width-container">
-    <div class="govuk-grid-row">
-      <div class="govuk-grid-column-two-thirds">
-        {{ govukBreadcrumbs({
-          items: [
-            {
-              text: "Home",
-              href: "#"
-            }
-          ]
-        }) }}
-
-        <span class="govuk-caption-l">
-          Part of <a href="#">Business and self-employed</a>
-        </span>
-        <h1 class="govuk-heading-l">
-          Next steps for {{ data.company['company-name'] }}
-        </h1>
-        <p>
-          You’ve registered your company - here’s a list of some of the things you need to do to get {{ data.company['company-name'] }} up and running.
-        </p>
-      </div>
-    </div>
-  </div>
-</div>
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "/question/premises"
+  }) }}
 {% endblock %}
 
 {% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl govuk-!-margin-bottom-3">
+      Next steps for your business
+    </h1>
+    <p class="govuk-body govuk-!-margin-bottom-9">
+      You’ve registered {{ data.company['company-name'] }} – here’s a list of some things you need to do to get set up and running.
+    </p>
+  </div>
+</div>
 
 <section class="app-category">
   <h2 class="govuk-heading-l">What you need to do soon</h2>
