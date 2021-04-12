@@ -14,16 +14,12 @@
         <span class="govuk-caption-l">{{releaseVersion}}</span>
       </h1>{{releaseVersion | log }}
 
-      <h2 class="govuk-heading-m">Start a business</h2>
-
-      <h3 class="govuk-heading-s">
-        Discovery: second round of user research
-      </h3>
+      <h2 class="govuk-heading-m">Next steps for your business</h2>
 
       <ul class="govuk-list app-list-participants">
         {% for company in data.companies %}
           <li>
-            <a href="/email-confirmation/{{ company['company-number'] }}">Participant {{ loop.index }}</a>
+            <a href="/email-confirmation/{{ company['company-number'] }}">{{ company['company-name'] }}</a>
             <br>https://suitcase:dungeness@govuk-start-a-business-proto.herokuapp.com/email-confirmation/{{ company['company-number'] }}
           </li>
         {% else %}
