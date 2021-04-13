@@ -1,6 +1,11 @@
 const express = require('express')
 const router = express.Router()
 
+router.get('/', function (req, res, next) {
+  req.session.data.crn = 12345678
+  next()
+})
+
 // Add your routes here - above the module.exports line
 router.get('/next-steps/', function (req, res, next) {
   req.session.data.ref = null
