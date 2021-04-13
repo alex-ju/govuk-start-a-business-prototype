@@ -7,7 +7,7 @@
         {{ result.reason }}
 
         {% if result.attribute !== 'company-sector' %}
-          (<a href="/question/{{ result.attribute }}?ref=next-steps" class="govuk-link">edit</a>)
+          (<a href="/question/{{ result.attribute }}?ref=next-steps" class="govuk-link">change answer<span class="govuk-visually-hidden"> for {{ result.at_attribute }}</span></a>)
         {% endif %}
       </li>
     </ul>

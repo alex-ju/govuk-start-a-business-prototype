@@ -35,6 +35,7 @@ module.exports = {
           body: 'You need to register your business for VAT if your VAT taxable turnover is more than £85,000.',
           reason: 'your turnover is more than £85,000',
           attribute: 'vat',
+          at_attribute: 'turnover',
           value: 'yes'
         },
         {
@@ -44,6 +45,7 @@ module.exports = {
           body: 'If your turnover is going to be more than £85,000, you need to register for VAT.',
           reason: 'your turnover might be more than £85,000 in future',
           attribute: 'vat',
+          at_attribute: 'turnover',
           value: 'maybe'
         }
       ]
@@ -80,6 +82,7 @@ module.exports = {
           body: 'What you need to know about to employing people.',
           reason: 'you’re going to employ people',
           attribute: 'employ',
+          at_attribute: 'employing people',
           value: 'yes'
         },
         {
@@ -89,6 +92,7 @@ module.exports = {
           body: 'Read through the rules on employment and looking after your staff.',
           reason: 'you already employ people',
           attribute: 'employ',
+          at_attribute: 'employing people',
           value: 'already-employ-someone'
         },
         {
@@ -98,6 +102,7 @@ module.exports = {
           body: 'What you need to know if you decide to employ people in future.',
           reason: 'you might employ people in future',
           attribute: 'employ',
+          at_attribute: 'employing people',
           value: 'maybe'
         }
       ]
@@ -112,6 +117,7 @@ module.exports = {
           body: 'Find out how to import items into the UK.',
           reason: 'you buy items from abroad',
           attribute: 'intent',
+          at_attribute: 'buying items from abroad',
           value: 'import'
         },
         {
@@ -121,6 +127,7 @@ module.exports = {
           body: 'Find out how to export items out of the UK.',
           reason: 'you sell items to customers abroad',
           attribute: 'intent',
+          at_attribute: 'buying items from abroad',
           value: 'export'
         },
         {
@@ -130,6 +137,7 @@ module.exports = {
           body: 'Rules you need to follow if you want to sell items online.',
           reason: 'you sell items online',
           attribute: 'intent',
+          at_attribute: 'buying items from abroad',
           value: 'sell-online'
         }
       ]
@@ -144,6 +152,7 @@ module.exports = {
           body: 'Get a loan of between £500 to £25,000 to help get your business started.',
           reason: 'you’re looking for help to get started',
           attribute: 'support',
+          at_attribute: 'looking for help to get started',
           value: 'getting-started'
         },
         {
@@ -153,6 +162,7 @@ module.exports = {
           body: 'Look for support, based on where you are, your industry and size.',
           // reason: 'you’re looking for help to get started',
           attribute: 'support',
+          at_attribute: 'looking for help to get started',
           value: 'getting-started'
         },
         {
@@ -162,6 +172,7 @@ module.exports = {
           body: 'Look through different sources of funding, including grants and loans.',
           reason: 'you’re looking for help to grow your business',
           attribute: 'support',
+          at_attribute: 'looking for help to get started',
           value: 'growing'
         },
         {
@@ -171,6 +182,7 @@ module.exports = {
           body: 'You might be able to get financial support if your business has been affected by coronavirus.',
           reason: 'you’re looking for help because of coronavirus',
           attribute: 'support',
+          at_attribute: 'looking for help to get started',
           value: 'covid-19'
         }
       ]
@@ -185,6 +197,7 @@ module.exports = {
           body: 'You might need extra permissions or insurance when you run your business from home.',
           reason: 'you’re running your business from home',
           attribute: 'premises',
+          at_attribute: 'business location',
           value: 'home'
         },
         {
@@ -194,6 +207,7 @@ module.exports = {
           body: 'Follow health and safety rules, and make repairs when required by your lease.',
           reason: 'you’re running your business from a rented premises',
           attribute: 'premises',
+          at_attribute: 'business location',
           value: 'renting'
         },
         {
@@ -203,6 +217,7 @@ module.exports = {
           body: 'Your local council will send you an annual bill to pay business rates for the property you rent.',
           // reason: 'you’re running your business from a rented premises',
           attribute: 'premises',
+          at_attribute: 'business location',
           value: 'renting'
         }
       ]
@@ -295,6 +310,7 @@ module.exports = {
           body: 'You might need to pay business rates, depending on what sort of work you do at home.',
           reason: 'you’re running your business from home',
           attribute: 'premises',
+          at_attribute: 'business location',
           value: 'home'
         }
       ]
@@ -333,6 +349,7 @@ module.exports = {
           body: 'As your business turnover is under £85,000, you do not have to register for VAT.',
           reason: 'your turnover will be less than £85,000',
           attribute: 'vat',
+          at_attribute: 'turnover',
           value: 'no'
         }
       ]
