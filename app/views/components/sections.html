@@ -15,7 +15,7 @@
             {% endif %}
             {{ appReason(result) }}
           </div>
-          <div class="govuk-grid-column-two-thirds">
+          <div class="govuk-grid-column-two-thirds {% if result.reason | length == 0 and loop.index > 1 %}app-indent-one-third{% endif %}">
             {{ appResult(result, important) }}
           </div>
         </div>
