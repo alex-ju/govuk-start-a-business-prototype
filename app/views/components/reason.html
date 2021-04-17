@@ -1,6 +1,6 @@
 {% macro appReason(result) %}
   {% if result.reason | length %}
-  <aside class="app-aside">
+  <div class="app-aside">
     <p class="govuk-body">Because you said:</p>
     <ul class="govuk-list govuk-list--bullet">
       <li>
@@ -11,6 +11,6 @@
         {% endif %}
       </li>
     </ul>
-  </aside>
+  </div>
   {% endif %}
 {% endmacro %}

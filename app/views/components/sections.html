@@ -6,7 +6,7 @@
     {% set results = section.results | visible(data) %}
 
     {% if results | length %}
-    <section class="app-section">
+    <div class="app-section">
       {% for result in results %}
         <div class="govuk-grid-row">
           <div class="govuk-grid-column-one-third">
@@ -20,7 +20,7 @@
           </div>
         </div>
       {% endfor %}
-    </section>
+    </div>
     {% endif %}
   {% endfor %}
 {% endmacro %}
