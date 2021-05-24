@@ -113,3 +113,8 @@ $govuk-assets-path: '/govuk/assets/';
     margin-bottom: govuk-spacing(3);
   }
 }
+
+.app-footnote {
+  font-size: .85rem;
+  color:  $govuk-secondary-text-colour;
+}
