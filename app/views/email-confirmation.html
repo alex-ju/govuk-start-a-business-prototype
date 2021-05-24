@@ -15,7 +15,7 @@
       <hr class="govuk-section-break govuk-section-break--visible govuk-section-break govuk-section-break--l">
 
       <h1 class="govuk-heading-s">
-        Congratulations, {{ data.company['company-name'] }} is now registered as a company.
+        Congratulations, your company {{ data.company['company-name']|default('ACME LIMITED') }} is now registered.
       </h1>
 
       <p>
@@ -24,22 +24,22 @@
 
       <p>
         Company name: <br>
-        <b>{{ data.company['company-name'] }}</b>
+        <b>{{ data.company['company-name']|default('ACME LIMITED') }}</b>
       </p>
 
       <p>
         Company number: <br>
-        <b>{{ data.company['company-number'] }}</b>
+        <b>{{ data.company['company-number']|default('12345678') }}</b>
       </p>
 
       <p>
         Company type: <br>
-        <b>{{ data.company['company-type'] }}</b>
+        <b>{{ data.company['company-type']|default('Private Limited by Shares') }}</b>
       </p>
 
       <p>
         Companies House submission number: <br>
-        <b>000 - 032597</b>
+        <b>099-999123</b>
       </p>
 
       <p>
@@ -50,22 +50,47 @@
         <li>memorandum of association</li>
       </ul>
 
+      <p>
+        Alternatively, you can retrieve these documents by signing into the WebFiling service and selecting 'My Recent Filings'.
+      </p>
+
       <h2 class="govuk-heading-s">Check what you need to do next</h2>
 
-      <p>There are other things you need to do to set up your business.</p>
-
-      <p><a class="govuk-link" href="/start">Find out what the next steps are for {{ data.company['company-name'] }}</a></p>
-
-      <h2 class="govuk-heading-s">Using the Companies House Webfiling service</h2>
       <p>
-        The company’s authentication code has been sent to the company’s registered office. You’ll need this to use Companies House’s WebFiling service.
-        When you file for this company in future, you can sign into WebFiling using this email address. You’ll need to set a new password by using the <a href="#">forgot password link</a>.<br>
+        There are other things you may need to do to set up your business.<br>
+        <a class="govuk-link" href="/start">Find out what the next steps are for {{ data.company['company-name']|default('ACME LIMITED') }}</a>
+      </p>
+
+      <h2 class="govuk-heading-s">Filing online with Companies House</h2>
+      <p>
+        You can use Companies House's WebFiling service to file many documents online. You'll need the company's authentication code to use this service, which we've sent to the company's registered office.<br>
+        You can sign in to WebFiling using this email address, and you'll need to set a new password by using the 'Forgot password' link at:
+      </p>
+
+      <p>
+        <a href="#">http://ewf.companieshouse.gov.uk/seclogin</a>
       </p>
 
       <p>
         <a href="#">Sign up for email reminders</a> and Companies House will remind you when your accounts and confirmation statement are due to be submitted.
       </p>
 
+      <p>
+        Thank you for using the 'Set up a limited company and register for Corporation Tax' service.
+      </p>
+
+      <p>
+        Please do not respond to this email.
+      </p>
+      <p>
+        Find out more about Companies House services at <a href="http://www.companieshouse.gov.uk">http://www.companieshouse.gov.uk</a>
+      </p>
+      <p>
+        You can contact Companies House on +44 (0)303 1234 500 or email <a href="mailto:enquiries@companieshouse.gov.uk">enquiries@companieshouse.gov.uk</a>.
+      </p>
+      <p>
+        You can get help and guidance for your business at <a href="https://www.gov.uk/business-support-helpline">https://www.gov.uk/business-support-helpline</a> where you can also find your local growth hub, the Business Support Helpline details and a business finance guide.
+      </p>
     </div>
   </div>
 
